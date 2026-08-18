@@ -173,14 +173,39 @@ export function getAllSitemapPaths(): string[] {
   return [
     "/",
     "/calculators",
+    ...toolPaths,
+    ...salaryPaths,
+    ...hourlyPaths,
     "/faq",
     "/about",
     "/contact",
     "/privacy-policy",
-    "/disclaimer",
     "/terms-of-use",
-    ...toolPaths,
-    ...salaryPaths,
-    ...hourlyPaths,
+    "/disclaimer",
   ];
+}
+
+export function getSitemapEntry(path: string): {
+  changeFrequency: "weekly" | "monthly" | "yearly";
+  priority: number;
+} {
+  if (path === "/") {
+    return { changeFrequency: "weekly", priority: 1 };
+  }
+  if (path === "/calculators") {
+    return { changeFrequency: "weekly", priority: 0.9 };
+  }
+  if (path.startsWith("/calculators/")) {
+    return { changeFrequency: "monthly", priority: 0.85 };
+  }
+  if (path.startsWith("/salary/") || path.startsWith("/hourly/")) {
+    return { changeFrequency: "monthly", priority: 0.8 };
+  }
+  if (path === "/faq") {
+    return { changeFrequency: "monthly", priority: 0.7 };
+  }
+  if (path === "/about" || path === "/contact") {
+    return { changeFrequency: "monthly", priority: 0.6 };
+  }
+  return { changeFrequency: "yearly", priority: 0.4 };
 }

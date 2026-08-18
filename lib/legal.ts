@@ -8,4 +8,4 @@ export const LEGAL_PAGES = [
   { href: "/contact", label: "Contact", icon: "✉️" },
 ] as const;
 
-export const CONTACT_EMAIL = "hello@aupaycalculator.com.au";
+export const CONTACT_EMAIL = "hello@ausalarycalc.com";

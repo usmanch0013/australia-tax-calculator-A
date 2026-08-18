@@ -3,7 +3,7 @@ export const SITE = {
   tagline: "Australian Salary & Take-Home Pay Calculator",
   description:
     "Work out your take-home pay after tax, Medicare, HECS and super. Free salary and pay calculators for Australia, updated for 2025–26.",
-  url: "https://aupaycalculator.com.au",
+  url: "https://ausalarycalc.com",
   year: "2025–26",
 } as const;
 
