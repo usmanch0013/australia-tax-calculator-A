@@ -1,0 +1,79 @@
+import type { Metadata, Viewport } from "next";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import CookieNotice from "@/components/CookieNotice";
+import { SITE } from "@/lib/content";
+import { PRIMARY_KEYWORDS } from "@/lib/seo";
+import "./globals.css";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#6b2737",
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE.url),
+  title: {
+    default: `Australian Salary Calculator ${SITE.year} — Free Pay & Tax Calculator`,
+    template: `%s | ${SITE.name}`,
+  },
+  description: SITE.description,
+  keywords: [...PRIMARY_KEYWORDS],
+  authors: [{ name: SITE.name }],
+  creator: SITE.name,
+  publisher: SITE.name,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: SITE.url,
+  },
+  openGraph: {
+    title: `Australian Salary & Pay Calculator ${SITE.year}`,
+    description: SITE.description,
+    type: "website",
+    locale: "en_AU",
+    url: SITE.url,
+    siteName: SITE.name,
+    images: [{ url: "/icon.svg", width: 512, height: 512, alt: SITE.name }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Australian Salary Calculator ${SITE.year}`,
+    description: SITE.description,
+    images: ["/icon.svg"],
+  },
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+  },
+  category: "finance",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en-AU">
+      <body>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
+        <Header />
+        <main id="main-content">{children}</main>
+        <Footer />
+        <CookieNotice />
+      </body>
+    </html>
+  );
+}

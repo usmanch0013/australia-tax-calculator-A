@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Australian Salary Calculator - Calculate take-home pay, income tax, Medicare levy and superannuation for 2024-25.">
+    <title>Australian Salary Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+
+<div id="au-salary-calculator">
+
+
+    <!-- Main Grid -->
+    <div class="asc-grid">
+
+        <!-- ===== LEFT COLUMN: Your Details ===== -->
+        <div class="asc-col-left">
+            <div class="asc-card">
+                <h2 class="asc-h2">
+                    <span class="asc-icon-wrapper" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </span>
+                    Your Details
+                </h2>
+
+                <!-- Salary Amount -->
+                <div class="asc-form-group">
+                    <label class="asc-label" for="asc-salary">Salary Amount</label>
+                    <div class="asc-input-wrap">
+                        <span class="asc-input-prefix" aria-hidden="true">$</span>
+                        <input type="number" id="asc-salary" class="asc-input" value="80000" min="0" step="1000" oninput="calculate()" aria-label="Salary amount in dollars">
+                    </div>
+                </div>
+
+                <!-- Salary Basis + Pay Frequency -->
+                <div style="display:flex; gap:1rem; margin-bottom:1.5rem; flex-wrap:wrap;">
+                    <div style="flex:1; min-width:140px;">
+                        <label class="asc-label" for="asc-basis">Salary Basis</label>
+                        <select id="asc-basis" class="asc-select" onchange="calculate()">
+                            <option value="annually">Annually</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="fortnightly">Fortnightly</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="daily">Daily</option>
+                            <option value="hourly">Hourly</option>
+                        </select>
+                    </div>
+                    <div style="flex:1; min-width:140px;">
+                        <label class="asc-label" for="asc-frequency">Pay Frequency</label>
+                        <select id="asc-frequency" class="asc-select" onchange="calculate()">
+                            <option value="1">Annually</option>
+                            <option value="12">Monthly</option>
+                            <option value="26">Fortnightly</option>
+                            <option value="52">Weekly</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Hours (shown only for hourly basis) -->
+                <div class="asc-form-group" id="hours-group" style="display:none;">
+                    <label class="asc-label" for="asc-hours">Hours per week</label>
+                    <div class="asc-input-wrap">
+                        <input type="number" id="asc-hours" class="asc-input" value="38" min="1" max="168" step="1" oninput="calculate()" style="padding-left:1rem;" aria-label="Hours worked per week">
+                    </div>
+                </div>
+
+                <!-- Advanced Options -->
+                <details class="asc-advanced">
+                    <summary>Advanced Options</summary>
+                    <div class="asc-advanced-content">
+
+                        <!-- Tax Settings -->
+                        <div class="asc-adv-section">
+                            <h4 class="asc-adv-heading">Tax Settings</h4>
+                            <label class="asc-checkbox-group">
+                                <input type="checkbox" id="asc-hecs" class="asc-checkbox" onchange="calculate()">
+                                <span style="font-size:0.95rem;font-weight:600;">HECS-HELP / VETSL Debt</span>
+                            </label>
+                            <label class="asc-checkbox-group">
+                                <input type="checkbox" id="asc-medicare-exemption" class="asc-checkbox" onchange="calculate()">
+                                <span style="font-size:0.95rem;font-weight:600;">Medicare Levy Exemption</span>
+                            </label>
+                            <label class="asc-checkbox-group">
+                                <input type="checkbox" id="asc-sapto" class="asc-checkbox" onchange="calculate()">
+                                <span style="font-size:0.95rem;font-weight:600;">Senior / Pensioner (SAPTO)</span>
+                            </label>
+
+                            <label class="asc-label mt-4">Family Status</label>
+                            <div class="asc-toggle-group mb-4" role="group" aria-label="Family status">
+                                <button class="asc-toggle-btn active" id="btn-fam-single" onclick="setFamilyStatus('single')">Single</button>
+                                <button class="asc-toggle-btn" id="btn-fam-couple" onclick="setFamilyStatus('couple')">Family / Couple</button>
+                            </div>
+
+                            <div id="dependants-group" style="display:none;">
+                                <label class="asc-label" for="asc-dependants">Number of Dependants</label>
+                                <div class="asc-input-wrap">
+                                    <input type="number" id="asc-dependants" class="asc-input" value="0" min="0" step="1" oninput="calculate()" style="padding-left:1rem;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Super & Salary Packaging -->
+                        <div class="asc-adv-section">
+                            <h4 class="asc-adv-heading">Super &amp; Salary Packaging</h4>
+                            <div class="asc-form-group" style="margin-bottom:0;">
+                                <label class="asc-label">Superannuation</label>
+                                <div class="asc-toggle-group mb-4" role="group" aria-label="Superannuation mode">
+                                    <button class="asc-toggle-btn active" id="btn-super-top" onclick="setSuperMode('top')">Super on top (12%)</button>
+                                    <button class="asc-toggle-btn" id="btn-super-inc" onclick="setSuperMode('inclusive')">Super inclusive</button>
+                                </div>
+                                <p style="font-size:0.85rem;font-weight:500;color:var(--text-muted);">Employer pays 12% super <span id="super-text">on top of</span> your salary</p>
+                            </div>
+                        </div>
+
+                        <!-- Additional Income & Deductions -->
+                        <div class="asc-adv-section">
+                            <h4 class="asc-adv-heading">Additional Income &amp; Deductions</h4>
+                            <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+                                <div style="flex:1;min-width:120px;">
+                                    <label class="asc-label" for="asc-other-income">Other Income</label>
+                                    <div class="asc-input-wrap">
+                                        <span class="asc-input-prefix" aria-hidden="true">$</span>
+                                        <input type="number" id="asc-other-income" class="asc-input" value="0" min="0" step="100" oninput="calculate()">
+                                    </div>
+                                </div>
+                                <div style="flex:1;min-width:120px;">
+                                    <label class="asc-label" for="asc-work-deductions">Work Deductions</label>
+                                    <div class="asc-input-wrap">
+                                        <span class="asc-input-prefix" aria-hidden="true">$</span>
+                                        <input type="number" id="asc-work-deductions" class="asc-input" value="0" min="0" step="100" oninput="calculate()">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </details>
+
+                <button class="asc-btn asc-btn-outline mb-4" onclick="resetDefaults()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+                    Reset to Defaults
+                </button>
+                <button class="asc-btn asc-btn-cta" onclick="copyResults()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    Copy Results
+                </button>
+            </div>
+        </div>
+
+        <!-- ===== RIGHT COLUMN: Results ===== -->
+        <div class="asc-col-right">
+
+            <!-- Tabs -->
+            <div class="asc-tabs" role="tablist">
+                <button class="asc-tab active" id="tab-btn-summary"  onclick="switchTab('summary')"  role="tab" aria-selected="true"  aria-controls="tab-summary">Summary</button>
+                <button class="asc-tab"        id="tab-btn-detailed" onclick="switchTab('detailed')" role="tab" aria-selected="false" aria-controls="tab-detailed">Detailed Breakdown</button>
+            </div>
+
+            <!-- Tab: Summary -->
+            <div id="tab-summary" class="asc-tab-content active" role="tabpanel">
+                <div class="asc-card">
+                    <div class="asc-summary-top">
+                        <!-- Donut Chart -->
+                        <div class="asc-chart-container" aria-hidden="true">
+                            <div id="asc-donut" class="asc-donut"></div>
+                            <div class="asc-donut-inner">
+                                <div id="chart-val" class="asc-donut-val">$63,612</div>
+                                <div class="asc-donut-label">take home</div>
+                            </div>
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="asc-stats-grid">
+                            <div class="asc-stat-row">
+                                <span class="asc-h3">Gross Salary</span>
+                                <span class="asc-stat-val" id="val-gross">$80,000.00</span>
+                            </div>
+                            <div class="asc-stat-row">
+                                <span class="asc-h3">Take-Home Pay</span>
+                                <span class="asc-stat-val highlight" id="val-takehome">$63,612.00</span>
+                            </div>
+                            <div class="asc-stat-row">
+                                <span class="asc-h3">Total Deductions</span>
+                                <span class="asc-stat-val deduction" id="val-deductions">$16,388.00</span>
+                            </div>
+                            <div class="asc-mini-stats">
+                                <div>
+                                    <span class="asc-h3">Effective Rate</span>
+                                    <div class="asc-stat-val" id="val-effective">20.5%</div>
+                                </div>
+                                <div>
+                                    <span class="asc-h3">Marginal Rate</span>
+                                    <div class="asc-stat-val" id="val-marginal">32.0%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Legend -->
+                    <div class="asc-legend" aria-label="Chart legend">
+                        <div class="asc-legend-item"><div class="asc-dot" style="background:var(--chart-takehome)"></div> Take Home</div>
+                        <div class="asc-legend-item"><div class="asc-dot" style="background:var(--chart-tax)"></div> Income Tax</div>
+                        <div class="asc-legend-item"><div class="asc-dot" style="background:var(--chart-medicare)"></div> Medicare Levy</div>
+                        <div class="asc-legend-item"><div class="asc-dot" style="background:var(--chart-super)"></div> Superannuation</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Detailed Breakdown -->
+            <div id="tab-detailed" class="asc-tab-content" role="tabpanel">
+                <div class="asc-card">
+                    <h2 class="asc-h2">
+                        <span class="asc-icon-wrapper asc-icon-wrapper--tax" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </span>
+                        Deductions Breakdown
+                    </h2>
+                    <table class="asc-table" aria-label="Deductions breakdown">
+                        <tbody id="table-breakdown">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Pay Periods Card -->
+            <div class="asc-card">
+                <h2 class="asc-h2" style="justify-content:space-between;">
+                    <span style="display:flex;align-items:center;gap:0.75rem;">
+                        <span class="asc-icon-wrapper asc-icon-wrapper--calendar" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                        </span>
+                        Pay Periods
+                    </span>
+                </h2>
+                <div style="overflow-x:auto;">
+                    <table class="asc-table" aria-label="Pay periods breakdown">
+                        <thead>
+                            <tr>
+                                <th>Period</th>
+                                <th>Gross</th>
+                                <th>Tax</th>
+                                <th>Net</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-periods">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size:0.85rem;font-weight:500;color:var(--text-muted);margin-top:1.5rem;text-align:center;">Based on 38-hour work week, 52 weeks, 26 fortnights, 260 working days per year.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="calculator.js"></script>
+</body>
+</html>
