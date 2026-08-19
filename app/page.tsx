@@ -12,7 +12,7 @@ import { SITE } from "@/lib/content";
 import { getFaqJsonLd, getWebsiteJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: `Australian Salary Calculator ${SITE.year} — Pay & Take-Home Pay`,
+  title: `Australian Salary After Tax ${SITE.year} — Pay & Take-Home Pay`,
   description:
     "See what you actually take home after tax, Medicare, HECS and super. Free pay calculators for Australia, using 2025–26 ATO rates.",
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: SITE.url },
   openGraph: {
-    title: `Australian Salary & Pay Calculator ${SITE.year}`,
+    title: `Australian Salary & Pay After Tax ${SITE.year}`,
     description:
       "Calculate your take-home pay after tax, Medicare, HECS and super. Free tools for Australian workers.",
     type: "website",

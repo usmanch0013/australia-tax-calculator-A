@@ -3,13 +3,13 @@ import { buildGuide, section } from "../helpers";
 export const guide = buildGuide(
   "take-home-pay-calculator",
   "Take-Home Pay Calculator Australia: Guide",
-  "Your take-home pay is the amount that actually lands in your bank account after income tax, the Medicare levy, and any HECS or HELP repayments are deducted from your gross salary. Employers quote pay in gross terms on contracts and job ads, but everyday budgeting depends on net figures. Our take-home pay calculator applies the 2025–26 ATO tax brackets, including Stage 3 tax cuts, the 2% Medicare levy, and current HECS repayment thresholds so you can see weekly, fortnightly, monthly, and annual net amounts right away. If you're comparing job offers, planning a mortgage, or checking that your payslip matches expectations, understanding your true take-home pay is the foundation of sound financial planning for Australian workers.",
+  "Take-home pay is what lands in your bank — after tax, Medicare and any HECS repayments. Job ads quote gross figures; rent and groceries come from net. This guide walks through how Aussie PAYG works in 2025–26, what the calculator above does with Stage 3 brackets, and the mistakes people make when they budget from the wrong number.",
   [
     section(
       "What Is Take-Home Pay in Australia?",
       [
-        "Take-home pay — also called net pay — is your gross income minus all mandatory deductions withheld by your employer before you receive your wages. The largest deduction is usually income tax, calculated using progressive tax brackets set by the Australian Taxation Office. On top of income tax, most employees pay the Medicare levy at 2% once their taxable income exceeds $26,000. If you have a HECS or HELP debt, compulsory repayments are also deducted through the PAYG withholding system once your repayment income crosses the relevant threshold, which starts at $54,435 for 2024–25.",
-        "Take-home pay does not include superannuation, which employers must contribute at 12% of ordinary time earnings under the Superannuation Guarantee from 1 July 2025. Super is paid separately into your nominated fund and is not part of your cash salary. Other deductions such as salary sacrifice, union fees, or private health insurance premiums further reduce what you receive, but the core take-home pay calculation focuses on tax, Medicare, and HECS — the standard PAYG deductions that apply to most Australian employees on a full-time or part-time salary.",
+        "Take-home pay — also called net pay — is your gross income minus all deductions your employer takes out withheld by your employer before you receive your wages. The largest deduction is usually income tax, calculated using progressive tax brackets set by the ATO. On top of income tax, most employees pay the Medicare levy at 2% once their taxable income exceeds $26,000. If you have a HECS or HELP debt, compulsory repayments are also deducted through the PAYG withholding system once your repayment income crosses the relevant threshold, which starts at $54,435 for 2024–25.",
+        "Take-home pay does not include superannuation, which employers must contribute at 12% of ordinary time earnings under the Superannuation Guarantee from 1 July 2025. Super is paid separately into your nominated fund and is not part of your cash salary. Other deductions such as salary sacrifice, union fees, or private health insurance premiums further reduce what you receive, but the core take-home pay calculation focuses on tax, Medicare, and HECS — the standard PAYG deductions that apply to most Aussie employees on a full-time or part-time salary.",
       ],
       {
         list: [
@@ -23,14 +23,14 @@ export const guide = buildGuide(
     section(
       "How the Take-Home Pay Calculator Works",
       [
-        "Our take-home pay calculator takes your gross annual salary and applies the 2025–26 Australian income tax brackets step by step. The first $18,200 is tax-free. Income between $18,201 and $45,000 is taxed at 16%, between $45,001 and $135,000 at 30%, between $135,001 and $190,000 at 37%, and above $190,000 at 45%. These rates reflect the Stage 3 tax cuts that took effect from 1 July 2024, reducing tax for most income earners compared with previous years.",
+        "Our take-home pay calculator takes your gross annual salary and applies the 2025–26 income tax brackets step by step. The first $18,200 is tax-free. Income between $18,201 and $45,000 is taxed at 16%, between $45,001 and $135,000 at 30%, between $135,001 and $190,000 at 37%, and above $190,000 at 45%. These rates reflect the Stage 3 tax cuts that took effect from 1 July 2024, reducing tax for most income earners compared with previous years.",
         "After calculating income tax, the tool adds the 2% Medicare levy on taxable income above $26,000. If you enable HECS repayments, it applies the ATO repayment rate for your income level — starting at 1% for incomes above $54,435 and rising in steps to 10% for incomes above $159,663. The calculator then divides your annual net pay into weekly, fortnightly, and monthly figures based on standard Australian pay cycles, giving you a complete picture of what you earn after tax.",
       ]
     ),
     section(
       "When Should You Use a Take-Home Pay Calculator?",
       [
-        "Use a take-home pay calculator whenever you need to translate a gross salary figure into real-world spending money. Job advertisements, employment contracts, and recruitment conversations almost always quote gross annual packages. Before accepting an offer, running the number through a calculator shows whether the role meets your living costs after tax. This is especially important when comparing roles at different income levels, because Australia's progressive tax system means that a $10,000 gross increase does not translate to $10,000 more in your pocket.",
+        "Use a take-home pay calculator whenever you need to translate a gross salary figure into real-world spending money. Job advertisements, employment contracts, and recruitment conversations almost always quote gross annual packages. Before accepting an offer, running the number through a calculator shows whether the role meets your living costs after tax. This is especially important when comparing roles at different income levels, because Australia's tiered tax system means that a $10,000 gross increase does not translate to $10,000 more in your pocket.",
         "A take-home pay calculator is also essential when planning major financial commitments. Lenders assess your gross income for serviceability, but you budget from net pay. Knowing your fortnightly take-home amount helps you set realistic rent or mortgage repayments, estimate savings capacity, and decide whether salary sacrifice into super is worthwhile. Students and graduates with HECS debt should always toggle HECS on to see the impact on net pay, as repayments can reduce take-home pay by thousands of dollars annually at higher income levels.",
       ],
       {
@@ -47,14 +47,14 @@ export const guide = buildGuide(
       "Step-by-Step: Calculate Your Take-Home Pay",
       [
         "Start by entering your gross annual salary in the calculator. If you know your weekly or fortnightly gross pay instead, multiply it out to an annual figure first — weekly gross times 52, or fortnightly gross times 26. Next, decide whether to include HECS repayments. If you have an outstanding HELP debt and your income exceeds the repayment threshold, toggle HECS on for an accurate result. Leave it off if you have no student debt or want to see your maximum possible take-home pay.",
-        "Review the breakdown showing income tax, Medicare levy, and HECS separately before looking at the net total. Compare the weekly, fortnightly, monthly, and annual take-home figures against your current payslip or budget. If you salary sacrifice into super, remember that sacrificed amounts reduce your taxable income and may lower your tax bill — The standard calculator above assumes no salary sacrifice unless you adjust the gross figure accordingly. For a full gross-to-net breakdown with super shown separately, try our gross to net calculator for a complementary view.",
+        "Review the breakdown showing income tax, Medicare levy, and HECS separately before looking at the net total. Compare the weekly, fortnightly, monthly, and annual take-home figures against your current payslip or budget. If you salary sacrifice into super, remember that sacrificed amounts reduce your taxable income and may lower your tax bill — The calculator above assumes no salary sacrifice unless you adjust the gross figure accordingly. For a full gross-to-net breakdown with super shown separately, try our gross to net calculator for a complementary view.",
       ]
     ),
     section(
       "Worked Example: $85,000 Gross Salary",
       [
-        "Consider an employee earning $85,000 gross per year with no HECS debt and no salary sacrifice. Under 2025–26 tax brackets, the first $18,200 is tax-free. The next $26,800 ($18,201 to $45,000) is taxed at 16%, producing $4,288 in tax. The remaining $40,000 ($45,001 to $85,000) is taxed at 30%, adding $12,000. Total income tax is approximately $16,288. The Medicare levy at 2% on the full $85,000 adds $1,700, bringing total tax to around $17,988.",
-        "Take-home pay is therefore approximately $67,012 per year, or about $1,289 per week, $2,578 per fortnight, and $5,584 per month. If the same employee had a HECS debt, repayments at the 3% rate (income between $70,618 and $74,855) would add roughly $2,550 in compulsory repayments, reducing annual take-home pay to around $64,462. This example illustrates why toggling HECS matters — at $85,000 the repayment rate sits in the 3% bracket, costing over $2,500 per year in additional deductions from your net pay.",
+        "Say you earning $85,000 gross per year with no HECS debt and no salary sacrifice. Under 2025–26 tax brackets, the first $18,200 is tax-free. The next $26,800 ($18,201 to $45,000) is taxed at 16%, producing $4,288 in tax. The remaining $40,000 ($45,001 to $85,000) is taxed at 30%, adding $12,000. Total income tax is about $16,288. The Medicare levy at 2% on the full $85,000 adds $1,700, bringing total tax to around $17,988.",
+        "Take-home pay is so about $67,012 per year, or about $1,289 per week, $2,578 per fortnight, and $5,584 per month. If the same employee had a HECS debt, repayments at the 3% rate (income between $70,618 and $74,855) would add roughly $2,550 in compulsory repayments, reducing annual take-home pay to around $64,462. This example shows why toggling HECS matters — at $85,000 the repayment rate sits in the 3% bracket, costing over $2,500 per year in additional deductions from your net pay.",
       ]
     ),
     section(
@@ -77,8 +77,8 @@ export const guide = buildGuide(
     section(
       "Common Mistakes When Estimating Take-Home Pay",
       [
-        "The most frequent error is confusing gross and net figures when budgeting. A $100,000 salary does not mean $100,000 in spending money — after tax, Medicare, and potentially HECS, take-home pay is closer to $73,000 to $75,000 depending on your circumstances. Another common mistake is forgetting that superannuation is on top of your gross salary for most employment contracts, not deducted from it. The 12% super guarantee is an additional employer cost, not a reduction in your cash pay.",
-        "Employees also often overlook the impact of HECS repayments, which scale with income and can surprise graduates when they cross repayment thresholds. Using last year's tax rates is another pitfall — Stage 3 cuts changed marginal rates from 1 July 2024, so calculators based on older brackets will overstate your tax. Finally, remember that PAYG withholding is an estimate; your actual tax liability is reconciled at tax time through your annual return, which may result in a refund or additional tax depending on deductions, offsets, and other income.",
+        "A common mistake is confusing gross and net figures when budgeting. A $100,000 salary does not mean $100,000 in spending money — after tax, Medicare, and potentially HECS, take-home pay is closer to $73,000 to $75,000 depending on your circumstances. Another common mistake is forgetting that superannuation is on top of your gross salary for most employment contracts, not deducted from it. The 12% super guarantee is an additional employer cost, not a reduction in your cash pay.",
+        "People also overlook the impact of HECS repayments, which scale with income and can surprise graduates when they cross repayment thresholds. Using last year's tax rates is another pitfall — Stage 3 cuts changed marginal rates from 1 July 2024, so calculators based on older brackets will overstate your tax. Finally, remember that PAYG withholding is an estimate; your actual tax liability is reconciled at tax time through your annual return, which may result in a refund or additional tax depending on deductions, offsets, and other income.",
       ]
     ),
     section(
@@ -91,7 +91,7 @@ export const guide = buildGuide(
     section(
       "Related Scenarios and Tools",
       [
-        "If you are paid hourly rather than on an annual salary, convert your rate first using our hourly to salary calculator, then enter the annual figure here for take-home pay. Conversely, if you know your desired net income and need to find the gross salary required, our net to gross calculator works in reverse. For a side-by-side view of every deduction line item, the gross to net calculator provides the most detailed tax breakdown available on this site.",
+        "If you are paid hourly rather than on an annual salary, convert your rate first using the hourly to salary calculator, then enter the annual figure here for take-home pay. Conversely, if you know your desired net income and need to find the gross salary required, our net to gross calculator works in reverse. For a side-by-side view of every deduction line item, the gross to net calculator shows a detailed tax breakdown available here.",
         "Part-time workers should annualise their gross pay before calculating — multiply weekly gross by 52 or use actual hours times hourly rate times 52. Casual workers receiving a 25% casual loading should include that loading in their gross figure, as it is taxable income. Remember that fringe benefits, allowances, and overtime may affect your total taxable income beyond base salary, so use the calculator as a baseline and adjust for any additional taxable components in your specific employment arrangement.",
       ],
       {
@@ -119,7 +119,7 @@ export const guide = buildGuide(
     {
       question: "How do Stage 3 tax cuts affect my take-home pay in 2025–26?",
       answer:
-        "Stage 3 tax cuts, effective from 1 July 2024, reduced the 19% rate to 16% and the 32.5% rate to 30%. Most Australian workers earning between $45,000 and $135,000 see lower tax and higher take-home pay compared with previous years. Our calculator applies these updated rates automatically.",
+        "Stage 3 tax cuts, effective from 1 July 2024, reduced the 19% rate to 16% and the 32.5% rate to 30%. Most Aussie workers earning between $45,000 and $135,000 see lower tax and higher take-home pay compared with previous years. Our calculator applies these updated rates automatically.",
     },
     {
       question: "When do HECS repayments reduce my take-home pay?",

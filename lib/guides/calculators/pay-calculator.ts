@@ -54,7 +54,7 @@ export const guide = buildGuide(
       "Worked Example: $72,000 Annual Salary",
       [
         "An employee on $72,000 gross with no HECS debt pays zero tax on the first $18,200. The portion from $18,201 to $45,000 ($26,800) attracts 16% tax, totalling $4,288. The remaining $27,000 from $45,001 to $72,000 is taxed at 30%, adding $8,100. Total income tax is $12,388. Medicare levy at 2% on $72,000 adds $1,440, bringing total deductions to $13,828.",
-        "Net annual pay is approximately $58,172, which breaks down to about $1,119 per week, $2,238 per fortnight, or $4,848 per month. Employer super at 12% adds $8,640 per year into the employee's super fund on top of this cash salary. If the employee had HECS debt at the 2% repayment rate (income between $62,850 and $66,620), an additional $1,440 in repayments would reduce take-home pay to roughly $56,732 annually. This example shows how a seemingly modest salary still involves over $13,000 in tax and levies.",
+        "Net annual pay is about $58,172, which breaks down to about $1,119 per week, $2,238 per fortnight, or $4,848 per month. Employer super at 12% adds $8,640 per year into the employee's super fund on top of this cash salary. If the employee had HECS debt at the 2% repayment rate (income between $62,850 and $66,620), an additional $1,440 in repayments would reduce take-home pay to roughly $56,732 annually. This example shows how a seemingly modest salary still involves over $13,000 in tax and levies.",
       ]
     ),
     section(
@@ -108,7 +108,7 @@ export const guide = buildGuide(
     {
       question: "How much tax do I pay on a $100,000 salary in Australia?",
       answer:
-        "On $100,000 gross in 2025–26, income tax is approximately $22,288, plus $2,000 Medicare levy, totalling around $24,288 in deductions. Take-home pay is roughly $75,712 before HECS. With HECS at the 4% rate, repayments of $4,000 further reduce net pay to about $71,712.",
+        "On $100,000 gross in 2025–26, income tax is about $22,288, plus $2,000 Medicare levy, totalling around $24,288 in deductions. Take-home pay is roughly $75,712 before HECS. With HECS at the 4% rate, repayments of $4,000 further reduce net pay to about $71,712.",
     },
     {
       question: "What pay cycle do most Australians use?",

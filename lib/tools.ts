@@ -38,9 +38,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Take-Home Pay Calculator Australia",
     shortName: "Take-Home Pay",
     description:
-      "Calculate your net pay after income tax, Medicare levy and HECS repayments.",
+      "What actually hits your bank after tax, Medicare and HECS — no guesswork.",
     seoIntro:
-      "Enter your gross pay to see your net salary after Australian income tax, the 2% Medicare levy and any HECS/HELP repayments. Enter your gross pay and see weekly, fortnightly, monthly and annual take-home amounts right away.",
+      "Type in your gross salary and see your real take-home pay. We factor in 2025–26 tax brackets, the 2% Medicare levy and HECS if you've got a student debt — weekly, fortnightly, monthly and yearly.",
     keywords: ["take home pay calculator", "net pay calculator", "take home pay calculator australia"],
     icon: "💵",
     category: "pay",
@@ -50,9 +50,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Pay Calculator Australia",
     shortName: "Pay Calculator",
     description:
-      "Free Australian pay calculator — gross to net with full tax breakdown for 2025–26.",
+      "Gross to net in seconds — full tax breakdown for Aussie workers.",
     seoIntro:
-      "A pay calculator for 2025–26. Calculate exactly how much you earn after tax, Medicare and super. Whether you're paid weekly, fortnightly or annually — get your full pay breakdown in seconds.",
+      "Whether you're paid weekly, fortnightly or yearly, this shows what's left after tax, Medicare and super. Built on current ATO rates — no account needed.",
     keywords: ["pay calculator", "pay calculator australia", "australian pay calculator"],
     icon: "🧮",
     category: "pay",
@@ -62,9 +62,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Hourly to Salary Calculator",
     shortName: "Hourly to Salary",
     description:
-      "Convert your hourly wage to an annual, monthly, weekly and daily salary.",
+      "Turn your hourly rate into an annual, monthly and weekly salary.",
     seoIntro:
-      "Got an hourly rate? Enter your hourly wage and hours per week to see your gross and estimated net annual, monthly, weekly and daily pay after tax.",
+      "Got a $35/hr offer? Plug in your hours per week and see the annual figure — plus an estimate of what you'd take home after tax.",
     keywords: ["hourly to salary", "hourly wage calculator", "hourly to annual salary"],
     icon: "⏱️",
     category: "pay",
@@ -74,9 +74,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Salary to Hourly Calculator",
     shortName: "Salary to Hourly",
     description:
-      "Convert annual salary to an hourly rate based on your hours worked per week.",
+      "Split an annual salary into an hourly rate for your hours worked.",
     seoIntro:
-      "Turn an annual salary into an hourly rate. Handy for comparing job offers, contract roles or part-time work — based on a standard 38-hour week or your custom hours.",
+      "Handy when you're comparing a salaried role to contract work, or just curious what your pay works out to per hour. Uses your actual hours — default is 38 a week.",
     keywords: ["salary to hourly", "annual to hourly", "salary to hourly rate calculator"],
     icon: "📊",
     category: "pay",
@@ -86,9 +86,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Gross to Net Salary Calculator",
     shortName: "Gross to Net",
     description:
-      "See how much you take home from your gross salary after Australian tax.",
+      "See how much of your gross salary you actually keep.",
     seoIntro:
-      "See what gross pay becomes after tax. Enter your gross annual income to see income tax, Medicare levy, HECS deductions and your exact take-home pay using 2025–26 ATO tax brackets.",
+      "Enter your gross income and we'll show income tax, Medicare, HECS (if applicable) and your net pay — line by line, using 2025–26 brackets.",
     keywords: ["gross to net", "gross salary net salary calculator", "gross to net calculator australia"],
     icon: "📉",
     category: "pay",
@@ -98,9 +98,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Net to Gross Calculator",
     shortName: "Net to Gross",
     description:
-      "Find the gross salary you need to achieve your target take-home pay.",
+      "Work backwards — find the gross salary you need for your target take-home.",
     seoIntro:
-      "Know how much take-home pay you want? Find the gross salary you need to ask for — accounting for income tax, Medicare and HECS at current ATO rates.",
+      "Want $5,000 a month after tax? This tells you the gross figure to negotiate for, after Medicare and HECS are accounted for.",
     keywords: ["net to gross", "reverse salary calculator", "net to gross calculator australia"],
     icon: "📈",
     category: "pay",
@@ -110,9 +110,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Income Tax Calculator Australia",
     shortName: "Income Tax",
     description:
-      "Estimate your Australian income tax based on 2025–26 ATO tax brackets.",
+      "Rough income tax on your earnings — 2025–26 ATO brackets.",
     seoIntro:
-      "Income tax estimates using official 2025–26 ATO tax brackets. See your income tax payable, marginal rate and effective tax rate — including Stage 3 tax cuts at 16% and 30%.",
+      "See how much income tax you'd pay, your marginal rate and effective rate. Includes the Stage 3 cuts — 16% and 30% in the middle bands.",
     keywords: ["income tax calculator", "tax calculator australia", "australian income tax calculator"],
     icon: "🏛️",
     category: "tax",
@@ -122,9 +122,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Medicare Levy Calculator",
     shortName: "Medicare Levy",
     description:
-      "Calculate your 2% Medicare levy and check if you qualify for a reduction or exemption.",
+      "Your 2% Medicare levy — and whether you might be exempt.",
     seoIntro:
-      "Most residents pay 2% of taxable income. Check if you qualify for a reduction or exemption based on the $26,000 low-income threshold.",
+      "Most Aussies pay 2% of taxable income for Medicare. Earn under $26,000? You might pay nothing or a reduced amount — check here.",
     keywords: ["medicare levy calculator", "medicare levy", "medicare levy australia"],
     icon: "🏥",
     category: "tax",
@@ -134,9 +134,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "HECS-HELP Repayment Calculator",
     shortName: "HECS Calculator",
     description:
-      "Estimate your annual HECS/HELP repayment based on your repayment income.",
+      "How much HECS gets taken from your pay each year.",
     seoIntro:
-      "Estimate your annual HELP/HECS debt repayment based on your income using graduated ATO repayment rates from 1% to 10% above the $54,435 threshold.",
+      "Once you earn above the threshold (~$54k), repayments kick in through PAYG. See your rate — from 1% up to 10% — based on your income.",
     keywords: ["hecs calculator", "hecs repayment calculator", "help debt calculator"],
     icon: "🎓",
     category: "tax",
@@ -146,9 +146,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Bonus Tax Calculator Australia",
     shortName: "Bonus Tax",
     description:
-      "See how much tax you'll pay on a bonus payment in Australia.",
+      "How much of your bonus the tax office keeps.",
     seoIntro:
-      "Got a bonus coming? Enter your annual salary and bonus amount to see the marginal tax rate applied and your bonus after tax using 2025–26 rates.",
+      "Bonuses get taxed at your marginal rate — which can sting. Enter your salary and bonus to see the after-tax amount and effective rate on the bonus.",
     keywords: ["bonus tax calculator", "bonus tax australia", "tax on bonus payment"],
     icon: "🎁",
     category: "tax",
@@ -158,9 +158,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Salary Sacrifice Calculator",
     shortName: "Salary Sacrifice",
     description:
-      "Calculate tax savings from salary sacrificing into superannuation.",
+      "Tax you'd save by sacrificing salary into super.",
     seoIntro:
-      "See how much tax you save by sacrificing part of your salary into super — contributions are taxed at 15% instead of your marginal rate.",
+      "Salary sacrifice means less taxable income now — super contributions are taxed at 15% inside the fund instead of your marginal rate. See the difference.",
     keywords: ["salary sacrifice calculator", "salary sacrifice car calculator", "salary packaging calculator"],
     icon: "💰",
     category: "super",
@@ -170,9 +170,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Superannuation Calculator Australia",
     shortName: "Super Calculator",
     description:
-      "Calculate employer super contributions at the 12% guarantee rate for 2025–26.",
+      "Employer super at the 12% guarantee rate.",
     seoIntro:
-      "Super estimates for 2025–26. Calculate your employer's 12% super guarantee contribution — whether super is paid on top of your salary or included in your total package.",
+      "Is super on top of your salary or baked into the package? Either way, see how much goes to your fund at the current 12% guarantee.",
     keywords: ["super calculator", "superannuation calculator", "super guarantee calculator"],
     icon: "🏦",
     category: "super",
@@ -182,9 +182,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Casual Loading Calculator",
     shortName: "Casual Loading",
     description:
-      "Calculate casual pay rates with 25% loading on top of the base hourly rate.",
+      "Casual hourly rate with the usual 25% loading.",
     seoIntro:
-      "Calculate your casual hourly rate with the standard 25% loading on top of the base rate, plus weekly and annual earnings.",
+      "Casual roles often pay 25% above the base hourly rate. Enter your base rate and hours to see weekly and annual casual earnings.",
     keywords: ["casual loading calculator", "casual rate calculator", "casual pay calculator australia"],
     icon: "👷",
     category: "work",
@@ -194,9 +194,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Annual Leave Calculator",
     shortName: "Annual Leave",
     description:
-      "Calculate the value of your annual leave entitlement in dollars.",
+      "Dollar value of your annual leave days.",
     seoIntro:
-      "Calculate the dollar value of your leave days based on your annual salary — including standard 20-day annual leave entitlements.",
+      "Twenty days of leave is worth real money. See what your entitlement is worth in dollars based on your salary.",
     keywords: ["annual leave calculator", "leave payout calculator", "annual leave entitlement calculator"],
     icon: "🏖️",
     category: "work",
@@ -206,9 +206,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Overtime Pay Calculator Australia",
     shortName: "Overtime Pay",
     description:
-      "Calculate overtime pay at 1.5× or 2× your base hourly rate.",
+      "Overtime at time-and-a-half or double time.",
     seoIntro:
-      "Calculate earnings at time-and-a-half (1.5×) or double time (2×) based on your base hourly rate and overtime hours worked.",
+      "Worked extra hours? Enter your base rate, hours and multiplier (1.5× or 2×) to see what you should earn — and how much more than normal hours.",
     keywords: ["overtime calculator", "overtime pay calculator", "time and a half calculator"],
     icon: "⚡",
     category: "work",
@@ -218,9 +218,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Pay Rise Calculator Australia",
     shortName: "Pay Rise",
     description:
-      "See how much extra take-home pay you'll get from a salary increase or pay rise.",
+      "How much of a pay rise you actually keep after tax.",
     seoIntro:
-      "Enter your current salary and pay increase percentage to see your new gross pay, extra take-home pay after tax, and how much of the rise goes to the ATO.",
+      "A $10k bump on paper isn't $10k in your pocket. See your new gross, extra take-home and how much goes to the ATO.",
     keywords: ["pay rise calculator", "salary increase calculator", "pay rise after tax australia"],
     icon: "📈",
     category: "pay",
@@ -230,9 +230,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Redundancy Pay Calculator Australia",
     shortName: "Redundancy Pay",
     description:
-      "Estimate genuine redundancy pay using Fair Work NES weeks and tax-free limits.",
+      "Estimate redundancy pay under Fair Work NES rules.",
     seoIntro:
-      "Estimate your redundancy payout based on years of service and weekly pay using National Employment Standards (NES) minimums, plus estimated tax on the taxable portion.",
+      "Genuine redundancy has tax-free limits and NES minimum weeks. Enter years of service and weekly pay for a rough payout figure.",
     keywords: ["redundancy pay calculator", "redundancy calculator australia", "severance pay calculator"],
     icon: "📋",
     category: "work",
@@ -242,9 +242,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Division 293 Tax Calculator",
     shortName: "Division 293",
     description:
-      "Calculate extra 15% tax on super contributions for high-income earners above $250,000.",
+      "Extra 15% tax on super when income is high.",
     seoIntro:
-      "If your income plus concessional super contributions exceed $250,000, you may owe an extra 15% tax on some or all of your super contributions.",
+      "Earn over $250k combined income and concessional super? You might owe Division 293 tax — an extra 15% on some super contributions.",
     keywords: ["division 293 calculator", "division 293 tax", "high income super tax"],
     icon: "🏛️",
     category: "super",
@@ -254,9 +254,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Novated Lease Calculator Australia",
     shortName: "Novated Lease",
     description:
-      "Estimate tax savings from salary packaging a car through a novated lease.",
+      "Tax savings from packaging a car through salary.",
     seoIntro:
-      "See how much income tax you save by packaging your car lease and running costs from pre-tax salary — a popular salary packaging option for Australian employees.",
+      "Novated leases pull car costs from pre-tax pay. See roughly how much income tax you could save compared to paying from after-tax dollars.",
     keywords: ["novated lease calculator", "salary packaging car calculator", "novated lease tax savings"],
     icon: "🚗",
     category: "super",
@@ -266,9 +266,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Long Service Leave Calculator",
     shortName: "Long Service Leave",
     description:
-      "Estimate the dollar value of long service leave based on years of service.",
+      "Value of long service leave in dollars.",
     seoIntro:
-      "Estimate your long service leave entitlement value in dollars based on years of continuous service and weekly pay — rules vary by state and industry.",
+      "LSL rules vary by state and industry. Enter years of service and weekly pay for an estimate of what your entitlement might be worth.",
     keywords: ["long service leave calculator", "long service leave payout", "lsl calculator australia"],
     icon: "🗓️",
     category: "work",
@@ -278,9 +278,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Pro-Rata Salary Calculator",
     shortName: "Pro-Rata Salary",
     description:
-      "Calculate part-time or pro-rata salary and take-home pay from a full-time equivalent.",
+      "Part-time pay from a full-time salary figure.",
     seoIntro:
-      "Convert a full-time salary to part-time based on days or hours worked per week, with estimated take-home pay after tax.",
+      "Working three days instead of five? Convert the full-time salary to your days or hours — with a take-home estimate after tax.",
     keywords: ["pro rata salary calculator", "part time salary calculator", "pro rata pay australia"],
     icon: "⏳",
     category: "pay",
@@ -290,9 +290,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Contract Day Rate Calculator",
     shortName: "Day Rate",
     description:
-      "Convert a contractor day rate to annual, weekly income and estimated after-tax pay.",
+      "Day rate to annual income and after-tax estimate.",
     seoIntro:
-      "Contractors: enter your daily rate and days worked per week to see annual gross income, estimated tax and take-home pay.",
+      "Contractors: multiply your day rate by days worked to see annual gross — then a rough take-home after tax.",
     keywords: ["day rate calculator", "contractor day rate calculator", "daily rate calculator australia"],
     icon: "💼",
     category: "pay",
@@ -302,9 +302,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Shift Penalty Rates Calculator",
     shortName: "Shift Penalties",
     description:
-      "Calculate weekend, evening and public holiday penalty rates on top of base pay.",
+      "Weekend, evening and public holiday penalty pay.",
     seoIntro:
-      "Calculate pay for Saturday, Sunday, evening and public holiday shifts using common award penalty rates including time-and-a-half and double time.",
+      "Saturday, Sunday, nights and public holidays often pay more. Enter your base rate and penalty type to see the loaded rate.",
     keywords: ["penalty rates calculator", "weekend penalty rates", "public holiday pay calculator australia"],
     icon: "🌙",
     category: "work",
@@ -314,9 +314,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Sick Leave Payout Calculator",
     shortName: "Sick Leave",
     description:
-      "Calculate the dollar value of accrued sick or personal leave days.",
+      "What your accrued sick leave is worth in cash.",
     seoIntro:
-      "Estimate the value of your accrued personal or sick leave days based on your annual salary — useful when leaving a job or planning time off.",
+      "Leaving a job or planning time off? See the dollar value of personal or sick leave you've built up.",
     keywords: ["sick leave calculator", "personal leave payout calculator", "sick leave payout australia"],
     icon: "🤒",
     category: "work",
@@ -326,9 +326,9 @@ const BASE_TOOLS: ToolMeta[] = [
     name: "Tax Refund Estimator Australia",
     shortName: "Tax Refund",
     description:
-      "Estimate whether you'll get a tax refund or owe money at tax time.",
+      "Will you get a refund or owe money at tax time?",
     seoIntro:
-      "Compare tax already withheld from your pay against your estimated tax liability for the year to see if you're likely to receive a refund or need to pay extra.",
+      "Compare tax already withheld on your payslips against what you likely owe for the year — rough idea of refund or bill.",
     keywords: ["tax refund calculator australia", "tax refund estimator", "will i get a tax refund"],
     icon: "💸",
     category: "tax",

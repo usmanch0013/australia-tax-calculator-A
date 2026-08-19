@@ -10,6 +10,13 @@ interface ToolShellProps {
   children: React.ReactNode;
 }
 
+const CATEGORY_LABELS: Record<ToolMeta["category"], string> = {
+  pay: "Pay & salary",
+  tax: "Tax",
+  super: "Super",
+  work: "Work & leave",
+};
+
 export default function ToolShell({ tool, children }: ToolShellProps) {
   const related = TOOLS.filter(
     (t) => t.category === tool.category && t.slug !== tool.slug
@@ -18,7 +25,7 @@ export default function ToolShell({ tool, children }: ToolShellProps) {
 
   return (
     <div className="tool-page">
-      <nav className="breadcrumb" aria-label="Breadcrumb">
+      <nav className="breadcrumb breadcrumb--tool" aria-label="Breadcrumb">
         <div className="site-container">
           <ol className="breadcrumb__list">
             <li><Link href="/">Home</Link></li>
@@ -30,46 +37,66 @@ export default function ToolShell({ tool, children }: ToolShellProps) {
 
       <PremiumHero
         compact
-        title={tool.shortName}
-        subtitle={tool.description}
-        badge={`${tool.icon} Free · ${tool.category === "pay" ? "Pay" : tool.category === "tax" ? "Tax" : tool.category === "super" ? "Super" : "Work"} · Australia`}
+        title={tool.name}
+        subtitle={tool.seoIntro}
+        badge={`${CATEGORY_LABELS[tool.category]} · Free`}
       />
 
-      <section className="tool-page__workspace" aria-label={`${tool.shortName} calculator`}>
-        <div className="site-container tool-page__calc">{children}</div>
+      <section
+        className="tool-page__workspace"
+        aria-label={`${tool.shortName} calculator`}
+      >
+        <div className="site-container">
+          <div className="tool-workspace-card">
+            <div className="tool-workspace-card__label">
+              <span className="tool-workspace-card__icon" aria-hidden="true">
+                {tool.icon}
+              </span>
+              <div>
+                <p className="tool-workspace-card__eyebrow">Calculator</p>
+                <p className="tool-workspace-card__name">{tool.shortName}</p>
+              </div>
+            </div>
+            <div className="tool-page__calc">{children}</div>
+          </div>
+        </div>
       </section>
 
       {guide && <ToolGuide guide={guide} />}
 
       {related.length > 0 && (
         <section
-          className="site-section site-section--alt tool-page__related"
+          className="site-section tool-page__related"
           aria-labelledby="related-tools-heading"
         >
           <div className="site-container">
-            <header className="section-header">
+            <header className="section-header section-header--left">
+              <p className="section-header__eyebrow">More tools</p>
               <h2 id="related-tools-heading" className="section-header__title">
-                Related Calculators
+                You might also need
               </h2>
             </header>
-            <div className="tools-grid tools-grid--compact">
+            <div className="tools-grid tools-grid--hub">
               {related.map((t) => (
                 <Link
                   key={t.slug}
                   href={`/calculators/${t.slug}`}
-                  className="tool-card tool-card--premium"
+                  className="tool-card tool-card--hub"
                 >
                   <span className="tool-card__icon" aria-hidden="true">
                     {t.icon}
                   </span>
-                  <h3 className="tool-card__name">{t.shortName}</h3>
-                  <span className="tool-card__cta">Calculate →</span>
+                  <div className="tool-card__body">
+                    <h3 className="tool-card__name">{t.shortName}</h3>
+                    <p className="tool-card__desc">{t.description}</p>
+                    <span className="tool-card__cta">Open calculator →</span>
+                  </div>
                 </Link>
               ))}
             </div>
             <p className="site-section__cta">
-              <Link href="/calculators" className="site-link">
-                View all calculators →
+              <Link href="/calculators" className="btn btn--outline">
+                Browse all calculators
               </Link>
             </p>
           </div>

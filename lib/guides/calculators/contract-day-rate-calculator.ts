@@ -21,7 +21,7 @@ export const guide = buildGuide(
       ],
     }),
     section("2025–26 Tax on Contractor Income", [
-      "Contractor income is taxable at the same resident rates as employment income in 2025–26. The Stage 3 tax cuts apply: 0% up to $18,200, 16% from $18,201 to $45,000, 30% from $45,001 to $135,000, 37% from $135,001 to $190,000, and 45% above $190,000. On $144,000 gross, income tax is approximately $35,788 plus $2,880 Medicare levy, leaving roughly $107,332 net before business expenses and HECS.",
+      "Contractor income is taxable at the same resident rates as employment income in 2025–26. The Stage 3 tax cuts apply: 0% up to $18,200, 16% from $18,201 to $45,000, 30% from $45,001 to $135,000, 37% from $135,001 to $190,000, and 45% above $190,000. On $144,000 gross, income tax is about $35,788 plus $2,880 Medicare levy, leaving roughly $107,332 net before business expenses and HECS.",
       "Unlike employees, contractors do not have PAYG tax withheld automatically unless they register for voluntary withholding or operate through an agency that withholds on their behalf. Sole traders pay tax through quarterly PAYG instalments and an annual tax return. Budget 25–30% of gross income for tax on typical contract earnings to avoid a large bill at year end. Our calculator estimates tax assuming all income is personal taxable income — company structures and deductions are not modelled.",
     ]),
     section("Day Rate vs Permanent Salary Comparison", [

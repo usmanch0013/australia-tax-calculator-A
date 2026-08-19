@@ -49,7 +49,7 @@ export const guide = buildGuide(
       "If you work multiple jobs, each employer pays SG separately up to the maximum contribution base (currently $250,000 per quarter per employer, indexed annually). There is no obligation for employers to pay SG on earnings above this base. Multiple employers each contributing 12% can quickly approach the $30,000 concessional cap, so monitor total contributions across all jobs.",
     ]),
     section("Checking Your Super Is Correct", [
-      "Review each payslip to confirm SG is being calculated and paid. The amount should be approximately 12% of your OTE for the period. Super contributions appear on your annual PAYG payment summary or income statement in myGov, and your super fund sends quarterly member statements showing contributions received.",
+      "Review each payslip to confirm SG is being calculated and paid. The amount should be about 12% of your OTE for the period. Super contributions appear on your annual PAYG payment summary or income statement in myGov, and your super fund sends quarterly member statements showing contributions received.",
       "If your employer is not paying the correct SG, you can report unpaid super to the ATO, which can investigate and recover amounts owed plus the SGC. Common issues include misclassifying workers as contractors, calculating SG on the wrong earnings base, or paying late. Keeping payslips and super statements helps you identify discrepancies early.",
     ]),
     section("Building Retirement Savings Beyond the 12% SG", [

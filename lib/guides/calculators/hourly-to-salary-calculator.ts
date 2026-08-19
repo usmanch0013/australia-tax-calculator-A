@@ -3,7 +3,7 @@ import { buildGuide, section } from "../helpers";
 export const guide = buildGuide(
   "hourly-to-salary-calculator",
   "Hourly to Salary Calculator Australia: Guide",
-  "Converting an hourly wage to an annual salary is one of the most common calculations Australian workers need — whether you are comparing a casual role to a permanent position, evaluating a job offer quoted in hourly terms, or planning your finances around shift work. Our hourly to salary calculator multiplies your hourly rate by your weekly hours and 52 weeks to produce gross annual, monthly, weekly, and daily figures, then estimates your net pay after 2025–26 income tax, the 2% Medicare levy, and optional HECS repayments. With Stage 3 tax cuts in effect and the superannuation guarantee at 12%, understanding the full annual value of an hourly rate is essential for fair pay comparisons across employment types in Australia.",
+  "Converting an hourly wage to an annual salary is one of the most common calculations Aussie workers need — whether you are comparing a casual role to a permanent position, evaluating a job offer quoted in hourly terms, or planning your finances around shift work. Our hourly to salary calculator multiplies your hourly rate by your weekly hours and 52 weeks to produce gross annual, monthly, weekly, and daily figures, then estimates your net pay after 2025–26 income tax, the 2% Medicare levy, and optional HECS repayments. With Stage 3 tax cuts in effect and the superannuation guarantee at 12%, understanding the full annual value of an hourly rate is essential for fair pay comparisons across employment types in Australia.",
   [
     section(
       "What Is an Hourly to Salary Conversion?",
@@ -24,7 +24,7 @@ export const guide = buildGuide(
       "How the Hourly to Salary Calculator Works",
       [
         "Enter your hourly pay rate and the number of hours you work per week. The calculator defaults to 38 hours — the standard full-time working week under the Fair Work Act — but you can adjust this for part-time, compressed, or extended hours. It multiplies your rate by weekly hours by 52 to produce your gross annual salary, then derives monthly, weekly, and daily equivalents.",
-        "Next, the calculator applies 2025–26 Australian income tax brackets including Stage 3 tax cuts, the 2% Medicare levy on income above $26,000, and optional HECS repayments at current ATO thresholds. The result shows both gross and estimated net annual pay, so you can compare an hourly role's true value against a salaried position. Employer superannuation at 12% is displayed separately as it is paid on top of your gross earnings into your super fund.",
+        "Next, the calculator applies 2025–26 income tax brackets including Stage 3 tax cuts, the 2% Medicare levy on income above $26,000, and optional HECS repayments at current ATO thresholds. The result shows both gross and estimated net annual pay, so you can compare an hourly role's true value against a salaried position. Employer superannuation at 12% is displayed separately as it is paid on top of your gross earnings into your super fund.",
       ]
     ),
     section(
@@ -53,14 +53,14 @@ export const guide = buildGuide(
     section(
       "Worked Example: $40/Hour at 38 Hours Per Week",
       [
-        "At $40 per hour working 38 hours per week, gross annual pay is $40 × 38 × 52 = $78,880. Breaking this down: monthly gross is approximately $6,573, weekly gross is $1,517, and daily gross (based on a 7.6-hour day) is about $304. Under 2025–26 tax brackets, income tax on $78,880 is roughly $15,028, plus $1,578 Medicare levy, totalling $16,606 in deductions.",
-        "Estimated net annual pay is approximately $62,274, or about $1,197 per week take-home. Employer super at 12% adds $9,466 per year into super on top of cash pay. For a casual worker on the same base rate with 25% loading ($50 per hour), gross annual rises to $98,800, with estimated net pay around $71,500 after tax — but without paid annual leave, sick leave, or public holiday entitlements that permanent employees receive.",
+        "At $40 per hour working 38 hours per week, gross annual pay is $40 × 38 × 52 = $78,880. Breaking this down: monthly gross is about $6,573, weekly gross is $1,517, and daily gross (based on a 7.6-hour day) is about $304. Under 2025–26 tax brackets, income tax on $78,880 is roughly $15,028, plus $1,578 Medicare levy, totalling $16,606 in deductions.",
+        "Estimated net annual pay is about $62,274, or about $1,197 per week take-home. Employer super at 12% adds $9,466 per year into super on top of cash pay. For a casual worker on the same base rate with 25% loading ($50 per hour), gross annual rises to $98,800, with estimated net pay around $71,500 after tax — but without paid annual leave, sick leave, or public holiday entitlements that permanent employees receive.",
       ]
     ),
     section(
       "Tax Implications of Hourly Income in 2025–26",
       [
-        "Hourly income is taxed at the same rates as salaried income under Australia's progressive tax system. The 2025–26 brackets — including Stage 3 cuts with 16% and 30% marginal rates — apply regardless of whether you are paid hourly or annually. Your employer withholds PAYG tax each pay cycle based on your gross earnings for that period, and the total annual tax is reconciled when you lodge your tax return.",
+        "Hourly income is taxed at the same rates as salaried income under Australia's tiered tax system. The 2025–26 brackets — including Stage 3 cuts with 16% and 30% marginal rates — apply regardless of whether you are paid hourly or annually. Your employer withholds PAYG tax each pay cycle based on your gross earnings for that period, and the total annual tax is reconciled when you lodge your tax return.",
         "Casual loading of 25% is fully taxable, which pushes casual workers into higher effective tax brackets faster than permanent employees on the same base rate. HECS repayments apply to your total repayment income, including casual earnings. If your annualised hourly income exceeds $54,435, compulsory HECS deductions begin. The Medicare levy at 2% applies once taxable income exceeds $26,000. Our calculator factors in all of these elements for an accurate net pay estimate.",
       ],
       {

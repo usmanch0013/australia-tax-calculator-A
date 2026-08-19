@@ -3,7 +3,7 @@ import { buildGuide, section } from "../helpers";
 export const guide = buildGuide(
   "novated-lease-calculator",
   "Novated Leases and Salary Packaging in Australia (2025–26)",
-  "A novated lease lets Australian employees finance a car using pre-tax salary, potentially reducing income tax on vehicle costs. The arrangement involves your employer, a finance company, and you — with lease payments and running costs deducted from your gross pay before tax is calculated. But the savings depend on your marginal tax rate, the cost of the vehicle package, Fringe Benefits Tax treatment, and whether your employer offers salary packaging. Here's how novated leases work under 2025–26 tax rules, what costs can be packaged, and how to estimate your tax savings using our novated lease calculator.",
+  "A novated lease lets Aussie employees finance a car using pre-tax salary, potentially reducing income tax on vehicle costs. The arrangement involves your employer, a finance company, and you — with lease payments and running costs deducted from your gross pay before tax is calculated. But the savings depend on your marginal tax rate, the cost of the vehicle package, Fringe Benefits Tax treatment, and whether your employer offers salary packaging. Here's how novated leases work under 2025–26 tax rules, what costs can be packaged, and how to estimate your tax savings using the novated lease calculator.",
   [
     section(
       "What Is a Novated Lease?",
@@ -62,15 +62,15 @@ export const guide = buildGuide(
     section(
       "Worked Example: $95,000 Salary, $12,000 Lease, $4,000 Running Costs",
       [
-        "An employee earning $95,000 packages a total of $16,000 per year ($12,000 lease + $4,000 running costs). Without packaging, total tax (income tax plus Medicare) is approximately $22,067, leaving take-home pay of $72,933. With packaging, taxable income drops to $79,000. Total tax falls to approximately $17,547, saving $4,520 per year.",
+        "An employee earning $95,000 packages a total of $16,000 per year ($12,000 lease + $4,000 running costs). Without packaging, total tax (income tax plus Medicare) is about $22,067, leaving take-home pay of $72,933. With packaging, taxable income drops to $79,000. Total tax falls to about $17,547, saving $4,520 per year.",
         "The effective after-tax cost of the car is $16,000 − $4,520 = $11,480 per year, or roughly $956 per month. Without the tax benefit, funding the same car from after-tax income would require $16,000 of take-home pay — equivalent to roughly $22,500 in gross salary at this tax rate. The novated lease delivers meaningful savings, though the employee's take-home pay drops by the packaged amount minus the tax saving.",
       ]
     ),
     section(
       "Worked Example: $140,000 Salary, $15,000 Lease, $5,000 Running Costs",
       [
-        "A higher-income employee on $140,000 packages $20,000 annually. Without packaging, total tax is approximately $38,347, with take-home of $101,653. With packaging, taxable income is $120,000 and total tax drops to approximately $31,147 — a saving of $7,200.",
-        "Effective after-tax cost: $20,000 − $7,200 = $12,800 per year. The higher marginal rate (30% plus 2% Medicare on most of the packaged amount) delivers greater tax savings than the $95,000 example. This illustrates why novated leases are most popular among middle-to-upper income earners. Employees below $45,000 see minimal benefit because their marginal rate is only 16% plus Medicare.",
+        "A higher-income employee on $140,000 packages $20,000 annually. Without packaging, total tax is about $38,347, with take-home of $101,653. With packaging, taxable income is $120,000 and total tax drops to about $31,147 — a saving of $7,200.",
+        "Effective after-tax cost: $20,000 − $7,200 = $12,800 per year. The higher marginal rate (30% plus 2% Medicare on most of the packaged amount) delivers greater tax savings than the $95,000 example. This shows why novated leases are most popular among middle-to-upper income earners. Employees below $45,000 see minimal benefit because their marginal rate is only 16% plus Medicare.",
       ]
     ),
     section(

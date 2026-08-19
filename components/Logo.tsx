@@ -19,90 +19,55 @@ export function LogoMark({ size = 40, className }: LogoMarkProps) {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       role="img"
-      aria-label="AU Pay Calculator logo"
+      aria-label="AU Salary After Tax logo"
     >
       <defs>
-        <linearGradient
-          id={`${id}-bg`}
-          x1="6"
-          y1="4"
-          x2="42"
-          y2="44"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#6b2737" />
-          <stop offset="0.55" stopColor="#521d2a" />
-          <stop offset="1" stopColor="#2a1018" />
+        <linearGradient id={`${id}-bg`} x1="8" y1="6" x2="40" y2="42" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#166534" />
+          <stop offset="1" stopColor="#052e16" />
         </linearGradient>
-        <linearGradient
-          id={`${id}-gold`}
-          x1="24"
-          y1="8"
-          x2="24"
-          y2="40"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#f0d9a8" />
-          <stop offset="0.45" stopColor="#d4aa62" />
-          <stop offset="1" stopColor="#b8863b" />
+        <linearGradient id={`${id}-coin`} x1="24" y1="10" x2="24" y2="38" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#fde68a" />
+          <stop offset="1" stopColor="#f59e0b" />
         </linearGradient>
       </defs>
 
       <rect width="48" height="48" rx="11" fill={`url(#${id}-bg)`} />
       <rect
-        x="1"
-        y="1"
-        width="46"
-        height="46"
-        rx="10"
-        stroke={`url(#${id}-gold)`}
-        strokeOpacity="0.4"
+        x="12"
+        y="14"
+        width="24"
+        height="20"
+        rx="3"
+        fill="rgba(255,255,255,0.15)"
+        stroke="rgba(255,255,255,0.35)"
         strokeWidth="1"
       />
-
-      <rect
-        x="10"
-        y="28"
-        width="4.5"
-        height="9"
-        rx="1.2"
-        fill={`url(#${id}-gold)`}
-        fillOpacity="0.5"
-      />
-      <rect
-        x="16.5"
-        y="23"
-        width="4.5"
-        height="14"
-        rx="1.2"
-        fill={`url(#${id}-gold)`}
-        fillOpacity="0.72"
-      />
-      <rect
-        x="23"
-        y="17"
-        width="4.5"
-        height="20"
-        rx="1.2"
-        fill={`url(#${id}-gold)`}
-      />
-
+      <circle cx="24" cy="24" r="7" fill={`url(#${id}-coin)`} />
       <text
-        x="35"
-        y="31"
+        x="24"
+        y="27.5"
         textAnchor="middle"
-        fontFamily="Georgia, 'Times New Roman', serif"
-        fontSize="21"
-        fontWeight="700"
-        fill={`url(#${id}-gold)`}
+        fontFamily="Outfit, system-ui, sans-serif"
+        fontSize="11"
+        fontWeight="800"
+        fill="#14532d"
       >
         $
       </text>
-
-      <circle cx="36" cy="11.5" r="1.15" fill="#faf7f2" fillOpacity="0.9" />
-      <circle cx="39.2" cy="14.2" r="0.9" fill="#faf7f2" fillOpacity="0.75" />
-      <circle cx="37.6" cy="17.8" r="0.75" fill="#faf7f2" fillOpacity="0.6" />
-      <circle cx="34" cy="15.8" r="0.6" fill="#faf7f2" fillOpacity="0.5" />
+      <path
+        d="M18 34 H30"
+        stroke={`url(#${id}-coin)`}
+        strokeWidth="2.5"
+        strokeLinecap="round"
+      />
+      <path
+        d="M20 38 H28"
+        stroke={`url(#${id}-coin)`}
+        strokeOpacity="0.7"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }

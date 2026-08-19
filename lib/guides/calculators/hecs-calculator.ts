@@ -3,13 +3,13 @@ import { buildGuide, section } from "../helpers";
 export const guide = buildGuide(
   "hecs-calculator",
   "HECS-HELP Repayment Calculator Australia: Guide for 2025–26",
-  "A HECS calculator estimates your compulsory HELP debt repayments based on your repayment income and the graduated rates published by the Australian Taxation Office. HECS-HELP — often called simply HECS — is Australia's income-contingent student loan system. Once your repayment income exceeds the threshold (approximately $54,435 in 2025–26), the ATO withholds repayments through PAYG alongside income tax and the Medicare levy. Repayment rates scale from 1% to 10% as income rises. Here's how HECS works, what counts as repayment income, how to use a hecs calculator, and how repayments fit into your total take-home pay alongside our income tax calculator and gross to net calculator.",
+  "A HECS calculator estimates your compulsory HELP debt repayments based on your repayment income and the graduated rates published by the ATO. HECS-HELP — often called simply HECS — is Australia's income-contingent student loan system. Once your repayment income exceeds the threshold (about $54,435 in 2025–26), the ATO withholds repayments through PAYG alongside income tax and the Medicare levy. Repayment rates scale from 1% to 10% as income rises. Here's how HECS works, what counts as repayment income, how to use a hecs calculator, and how repayments fit into your total take-home pay alongside our income tax calculator and gross to net calculator.",
   [
     section(
       "What Is HECS-HELP and How Do Repayments Work?",
       [
         "HECS-HELP is the Australian Government's income-contingent loan scheme for higher education. When you study at university or an approved provider using a HELP loan, the government pays your tuition fees and you repay the debt through the tax system once your income reaches a threshold. Unlike a mortgage or personal loan, there are no fixed monthly repayments — the amount you pay each year depends entirely on how much you earn.",
-        "Repayments are calculated as a percentage of your repayment income, not the size of your debt. In 2025–26, the minimum repayment threshold is approximately $54,435. Below that income, you pay nothing regardless of how large your debt is. Above the threshold, rates start at 1% and increase through graduated brackets to a maximum of 10% on incomes above approximately $159,663. The ATO automatically withholds repayments from your pay through the same PAYG system that collects income tax and the Medicare levy. A hecs calculator applies these rates to your income to estimate annual, monthly, and fortnightly repayment amounts.",
+        "Repayments are calculated as a percentage of your repayment income, not the size of your debt. In 2025–26, the minimum repayment threshold is about $54,435. Below that income, you pay nothing regardless of how large your debt is. Above the threshold, rates start at 1% and increase through graduated brackets to a maximum of 10% on incomes above about $159,663. The ATO automatically withholds repayments from your pay through the same PAYG system that collects income tax and the Medicare levy. A hecs calculator applies these rates to your income to estimate annual, monthly, and fortnightly repayment amounts.",
       ]
     ),
     section(
@@ -20,9 +20,9 @@ export const guide = buildGuide(
       ],
       {
         list: [
-          "Repayment threshold 2025–26: approximately $54,435",
+          "Repayment threshold 2025–26: about $54,435",
           "Minimum rate above threshold: 1% of repayment income",
-          "Maximum rate: 10% on incomes above approximately $159,663",
+          "Maximum rate: 10% on incomes above about $159,663",
           "19 graduated brackets between 1% and 10%",
           "No repayments required below the threshold regardless of debt size",
         ],
@@ -32,7 +32,7 @@ export const guide = buildGuide(
       "2025–26 HECS Repayment Rates and Brackets",
       [
         "The ATO publishes updated repayment thresholds each year, indexed to average weekly earnings. For 2025–26, repayment income between $54,435 and $62,850 attracts a 1% repayment rate. Rates step up through brackets: 2% up to $66,620, 2.5% up to $70,618, continuing in half-percent increments until reaching 10% on repayment income above $159,663. Each bracket applies to your total repayment income — you do not pay different rates on different portions in the way income tax brackets work.",
-        "On $70,000 repayment income, the rate is 2.5%, meaning annual repayments of $1,750. On $90,000, the rate is 5%, yielding $4,500 per year or roughly $173 per fortnight. On $120,000, the 7.5% rate produces $9,000 in annual repayments. These amounts are withheld progressively through PAYG, so your take-home pay reflects HECS alongside income tax and the 2% Medicare levy. A hecs calculator maps your income to the correct bracket right away.",
+        "On $70,000 repayment income, the rate is 2.5%, meaning annual repayments of $1,750. On $90,000, the rate is 5%, yielding $4,500 per year or roughly $173 per fortnight. On $120,000, the 7.5% rate produces $9,000 in annual repayments. These amounts are withheld progressively through PAYG, so your take-home pay reflects HECS alongside income tax and the 2% Medicare levy. A hecs calculator maps your income to the correct bracket in seconds.",
       ]
     ),
     section(
@@ -61,8 +61,8 @@ export const guide = buildGuide(
     section(
       "Worked Examples at Common Income Levels",
       [
-        "A graduate earning $52,000 falls below the $54,435 threshold and makes no compulsory HECS repayments, though their debt continues to be indexed to CPI annually. Take-home pay reflects only income tax of approximately $5,408 and Medicare levy of $1,040, leaving around $45,552 net before other deductions.",
-        "At $70,000 repayment income, the 2.5% rate applies. Annual HECS repayment is $1,750. Combined with income tax of approximately $11,788 and Medicare levy of $1,400, total deductions reach about $14,938, leaving take-home near $55,062. At $100,000, the 5.5% rate produces $5,500 in HECS repayments. Income tax is approximately $20,788, Medicare $2,000, and total deductions about $28,288 — take-home around $71,712. At $130,000, the 8% rate means $10,400 in annual HECS repayments, a significant line item that pushes effective marginal withholding well above income tax alone.",
+        "A graduate earning $52,000 falls below the $54,435 threshold and makes no compulsory HECS repayments, though their debt continues to be indexed to CPI annually. Take-home pay reflects only income tax of about $5,408 and Medicare levy of $1,040, leaving around $45,552 net before other deductions.",
+        "At $70,000 repayment income, the 2.5% rate applies. Annual HECS repayment is $1,750. Combined with income tax of about $11,788 and Medicare levy of $1,400, total deductions reach about $14,938, leaving take-home near $55,062. At $100,000, the 5.5% rate produces $5,500 in HECS repayments. Income tax is about $20,788, Medicare $2,000, and total deductions about $28,288 — take-home around $71,712. At $130,000, the 8% rate means $10,400 in annual HECS repayments, a significant line item that pushes effective marginal withholding well above income tax alone.",
       ]
     ),
     section(
@@ -98,12 +98,12 @@ export const guide = buildGuide(
     {
       question: "When do I start paying HECS back in Australia?",
       answer:
-        "Compulsory HECS-HELP repayments begin when your repayment income exceeds the annual threshold, approximately $54,435 in 2025–26. Below that income you pay nothing, regardless of your debt balance. Above the threshold, your employer withholds repayments through PAYG at the rate for your income bracket, from 1% up to 10%.",
+        "Compulsory HECS-HELP repayments begin when your repayment income exceeds the annual threshold, about $54,435 in 2025–26. Below that income you pay nothing, regardless of your debt balance. Above the threshold, your employer withholds repayments through PAYG at the rate for your income bracket, from 1% up to 10%.",
     },
     {
       question: "How much HECS do I pay on $80,000 income?",
       answer:
-        "On $80,000 repayment income in 2025–26, the HECS repayment rate is 4%, giving annual repayments of $3,200 — about $123 per fortnight. This is on top of income tax of approximately $14,788 and Medicare levy of $1,600. Use a hecs calculator or gross to net calculator for exact figures at your income level.",
+        "On $80,000 repayment income in 2025–26, the HECS repayment rate is 4%, giving annual repayments of $3,200 — about $123 per fortnight. This is on top of income tax of about $14,788 and Medicare levy of $1,600. Use a hecs calculator or gross to net calculator for exact figures at your income level.",
     },
     {
       question: "Is HECS calculated on my debt balance or my income?",

@@ -10,31 +10,32 @@ export default function ToolsShowcase() {
       aria-labelledby="tools-showcase-heading"
     >
       <div className="site-container">
-        <header className="section-header">
-          <p className="section-header__eyebrow">Free Australian Tools</p>
+        <header className="section-header section-header--left">
+          <p className="section-header__eyebrow">More free tools</p>
           <h2 id="tools-showcase-heading" className="section-header__title">
-            Pay, Tax &amp; Super Calculators
+            Pay, tax &amp; super calculators
           </h2>
           <p className="section-header__desc">
-            {TOOLS.length}+ free calculators for salary, income tax, HECS,
-            superannuation, bonus tax and more — all updated for Australian
-            2025–26 rates.
+            {TOOLS.length} calculators for the stuff payslips don&apos;t spell
+            out clearly — HECS, bonuses, day rates, leave payouts and more.
           </p>
         </header>
 
-        <div className="tools-grid">
+        <div className="tools-grid tools-grid--hub">
           {featured.map((tool) => (
             <Link
               key={tool.slug}
               href={`/calculators/${tool.slug}`}
-              className="tool-card tool-card--premium"
+              className="tool-card tool-card--hub"
             >
               <span className="tool-card__icon" aria-hidden="true">
                 {tool.icon}
               </span>
-              <h3 className="tool-card__name">{tool.shortName}</h3>
-              <p className="tool-card__desc">{tool.description}</p>
-              <span className="tool-card__cta">Calculate now →</span>
+              <div className="tool-card__body">
+                <h3 className="tool-card__name">{tool.shortName}</h3>
+                <p className="tool-card__desc">{tool.description}</p>
+                <span className="tool-card__cta">Open calculator →</span>
+              </div>
             </Link>
           ))}
         </div>
@@ -57,7 +58,7 @@ export default function ToolsShowcase() {
 
         <p className="site-section__cta">
           <Link href="/calculators" className="btn btn--outline">
-            View all {TOOLS.length} calculators
+            See all {TOOLS.length} calculators
           </Link>
         </p>
       </div>

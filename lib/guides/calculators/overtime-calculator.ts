@@ -3,7 +3,7 @@ import { buildGuide, section } from "../helpers";
 export const guide = buildGuide(
   "overtime-calculator",
   "Overtime Pay in Australia (2025–26)",
-  "Overtime pay compensates Australian workers for hours worked beyond their ordinary rostered hours. Most modern awards and enterprise agreements specify overtime rates as a multiple of the base hourly rate — commonly time-and-a-half (1.5×) for the first two or three hours and double time (2×) thereafter, with higher rates on weekends and public holidays. Here's how overtime works under the Fair Work Act, how to calculate overtime earnings at 1.5× and 2× rates, the relationship between overtime and superannuation, tax treatment in 2025–26, and how award rules affect your entitlements.",
+  "Overtime pay compensates Aussie workers for hours worked beyond their ordinary rostered hours. Most modern awards and enterprise agreements specify overtime rates as a multiple of the base hourly rate — commonly time-and-a-half (1.5×) for the first two or three hours and double time (2×) thereafter, with higher rates on weekends and public holidays. Here's how overtime works under the Fair Work Act, how to calculate overtime earnings at 1.5× and 2× rates, the relationship between overtime and superannuation, tax treatment in 2025–26, and how award rules affect your entitlements.",
   [
     section("What Is Overtime?", [
       "Overtime refers to hours worked outside an employee's ordinary hours of work, paid at a higher rate than the standard hourly rate. For most full-time employees in Australia, ordinary hours are 38 per week, though this varies by award and industry. Hours worked beyond the daily or weekly threshold trigger overtime rates as defined in the applicable modern award or enterprise agreement.",

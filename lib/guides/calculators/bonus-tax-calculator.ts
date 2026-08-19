@@ -31,7 +31,7 @@ export const guide = buildGuide(
     section(
       "Marginal Rate Method Explained",
       [
-        "The marginal rate method calculates tax on your annual salary alone, then calculates tax on your annual salary plus the bonus, and withholds the difference as tax on the bonus. This method isolates the tax impact of the bonus at your current marginal bracket. On a $90,000 salary with a $10,000 bonus, income tax on $90,000 is approximately $18,788. Income tax on $100,000 is approximately $20,788. The incremental income tax on the bonus is $2,000 — an effective 20% on the bonus for income tax alone because the bonus sits entirely in the 30% bracket but the calculation reflects only the marginal addition.",
+        "The marginal rate method calculates tax on your annual salary alone, then calculates tax on your annual salary plus the bonus, and withholds the difference as tax on the bonus. This method isolates the tax impact of the bonus at your current marginal bracket. On a $90,000 salary with a $10,000 bonus, income tax on $90,000 is about $18,788. Income tax on $100,000 is about $20,788. The incremental income tax on the bonus is $2,000 — an effective 20% on the bonus for income tax alone because the bonus sits entirely in the 30% bracket but the calculation reflects only the marginal addition.",
         "Adding Medicare at 2% ($200) and HECS at 5.5% on $100,000 ($550 incremental on the bonus portion) pushes total withholding on the $10,000 bonus higher. A bonus tax calculator performs this with-and-without comparison automatically, showing bonus tax, bonus after tax, effective bonus tax rate, and marginal rate. This is more accurate than applying a single percentage to the bonus amount.",
       ]
     ),
@@ -61,8 +61,8 @@ export const guide = buildGuide(
     section(
       "Worked Examples: Bonus Tax at Different Salary Levels",
       [
-        "An employee earning $70,000 with no HECS receives a $5,000 bonus. Income tax on $70,000 is approximately $11,788; on $75,000 it is approximately $13,288. Income tax on the bonus: $1,500 (30% marginal rate on the full bonus, as it sits above $45,000). Medicare adds $100 (2%). Total bonus tax: approximately $1,600. Bonus after tax: about $3,400. Effective bonus tax rate: 32%.",
-        "A professional earning $120,000 with HECS receives a $15,000 bonus. Without the bonus, income tax is approximately $27,388, Medicare $2,400, and HECS $9,000 at the 7.5% rate. With the bonus ($135,000 total), income tax rises to approximately $31,288 (crossing into the 37% bracket on income above $135,000), Medicare $2,700, and HECS $10,125 at 7.5%. Incremental tax on the $15,000 bonus: approximately $6,325. Bonus after tax: about $8,675. Effective rate: 42%. The bracket jump at $135,000 makes large bonuses particularly expensive at this income level.",
+        "An employee earning $70,000 with no HECS receives a $5,000 bonus. Income tax on $70,000 is about $11,788; on $75,000 it is about $13,288. Income tax on the bonus: $1,500 (30% marginal rate on the full bonus, as it sits above $45,000). Medicare adds $100 (2%). Total bonus tax: about $1,600. Bonus after tax: about $3,400. Effective bonus tax rate: 32%.",
+        "A professional earning $120,000 with HECS receives a $15,000 bonus. Without the bonus, income tax is about $27,388, Medicare $2,400, and HECS $9,000 at the 7.5% rate. With the bonus ($135,000 total), income tax rises to about $31,288 (crossing into the 37% bracket on income above $135,000), Medicare $2,700, and HECS $10,125 at 7.5%. Incremental tax on the $15,000 bonus: about $6,325. Bonus after tax: about $8,675. Effective rate: 42%. The bracket jump at $135,000 makes large bonuses particularly expensive at this income level.",
       ]
     ),
     section(
@@ -90,7 +90,7 @@ export const guide = buildGuide(
       "Related Calculators and Planning",
       [
         "A bonus tax calculator is most useful as part of a broader pay toolkit. The income tax calculator shows bracket-based tax on any income level. A gross to net calculator reveals total take-home including bonus income added to salary. A hecs calculator shows whether your bonus pushes you into a higher repayment bracket. A net to gross calculator helps if you need a specific after-tax bonus target.",
-        "For ongoing remuneration planning, a pay rise calculator models recurring increases. Salary sacrifice calculators show whether directing bonus into super — where contributions are taxed at 15% — saves tax compared to taking the bonus as cash, especially for earners above $45,000 facing 30% plus Medicare marginal rates. Super calculators estimate the 12% employer contribution on bonus-inclusive income. Together, these tools help Australian workers understand that a bonus headline figure is never the same as money in the bank.",
+        "For ongoing remuneration planning, a pay rise calculator models recurring increases. Salary sacrifice calculators show whether directing bonus into super — where contributions are taxed at 15% — saves tax compared to taking the bonus as cash, especially for earners above $45,000 facing 30% plus Medicare marginal rates. Super calculators estimate the 12% employer contribution on bonus-inclusive income. Together, these tools help Aussie workers understand that a bonus headline figure is never the same as money in the bank.",
       ]
     ),
   ],
@@ -98,7 +98,7 @@ export const guide = buildGuide(
     {
       question: "How much tax do I pay on a $10,000 bonus in Australia?",
       answer:
-        "It depends on your annual salary and HECS status. On a $80,000 salary with no HECS, a $10,000 bonus attracts roughly $3,000 income tax (30% marginal rate), $200 Medicare, and about $3,200 total tax — leaving approximately $6,800 after tax. On a $120,000 salary with HECS, the effective rate can exceed 40% due to higher marginal rates and HELP repayments. Use a bonus tax calculator for your exact figures.",
+        "It depends on your annual salary and HECS status. On a $80,000 salary with no HECS, a $10,000 bonus attracts roughly $3,000 income tax (30% marginal rate), $200 Medicare, and about $3,200 total tax — leaving about $6,800 after tax. On a $120,000 salary with HECS, the effective rate can exceed 40% due to higher marginal rates and HELP repayments. Use a bonus tax calculator for your exact figures.",
     },
     {
       question: "Is bonus tax different from regular income tax in Australia?",

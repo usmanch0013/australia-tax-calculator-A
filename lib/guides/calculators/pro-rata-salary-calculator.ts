@@ -74,7 +74,7 @@ export const guide = buildGuide(
     {
       question: "Does super apply to pro-rata salary?",
       answer:
-        "Yes. Employers pay 12% superannuation guarantee on your actual ordinary time earnings from 1 July 2025, whether you work full-time or part-time. Super is typically paid on top of your salary. On a $50,000 pro-rata salary, expect approximately $6,000 in annual employer super contributions.",
+        "Yes. Employers pay 12% superannuation guarantee on your actual ordinary time earnings from 1 July 2025, whether you work full-time or part-time. Super is typically paid on top of your salary. On a $50,000 pro-rata salary, expect about $6,000 in annual employer super contributions.",
     },
     {
       question: "Can I work part-time at two jobs without extra tax?",

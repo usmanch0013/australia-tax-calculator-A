@@ -3,7 +3,7 @@ import { buildGuide, section } from "../helpers";
 export const guide = buildGuide(
   "annual-leave-calculator",
   "Annual Leave in Australia (2025–26)",
-  "Annual leave — also called recreation leave or holiday pay — is a core entitlement for Australian employees under the National Employment Standards (NES). Full-time permanent workers receive four weeks (20 working days) of paid annual leave per year, accruing progressively from their first day of employment. Understanding the dollar value of your leave helps when negotiating salary, planning time off, calculating payout on resignation, or comparing job offers. This guide covers NES leave entitlements, how to calculate leave value, pro-rata accrual, payout rules, and how annual leave interacts with tax in 2025–26.",
+  "Annual leave — also called recreation leave or holiday pay — is a core entitlement for Aussie employees under the National Employment Standards (NES). Full-time permanent workers receive four weeks (20 working days) of paid annual leave per year, accruing progressively from their first day of employment. Understanding the dollar value of your leave helps when negotiating salary, planning time off, calculating payout on resignation, or comparing job offers. This guide covers NES leave entitlements, how to calculate leave value, pro-rata accrual, payout rules, and how annual leave interacts with tax in 2025–26.",
   [
     section("Annual Leave Entitlements Under the NES", [
       "The National Employment Standards, which apply to all employees covered by the national workplace relations system, grant full-time employees four weeks of paid annual leave per year. Part-time employees receive a pro-rata entitlement based on their ordinary hours — someone working three days per week accrues leave at 60% of the full-time rate. Annual leave accrues progressively throughout the year and continues to accrue during paid leave, but generally not during unpaid leave.",
@@ -25,7 +25,7 @@ export const guide = buildGuide(
       "The calculator provides estimates based on a standard salary structure. It does not include the 17.5% leave loading that many awards require when annual leave is actually taken (not when calculating accrued balance). It also does not account for tax withheld when leave is paid out, which is treated as ordinary income in the pay period it is received.",
     ]),
     section("Annual Leave Accrual and Balances", [
-      "Annual leave accrues continuously from your start date at the rate of 1/13th of your annual entitlement per completed month (for four weeks per year). After six months, a full-time employee has accrued approximately 10 days. Leave balances carry over year to year — there is no use-it-or-lose-it rule under the NES, though your employer may require you to take leave if your balance is excessive.",
+      "Annual leave accrues continuously from your start date at the rate of 1/13th of your annual entitlement per completed month (for four weeks per year). After six months, a full-time employee has accrued about 10 days. Leave balances carry over year to year — there is no use-it-or-lose-it rule under the NES, though your employer may require you to take leave if your balance is excessive.",
       "You can check your accrued leave balance on your payslip or through your employer's HR system. Upon resignation or redundancy, your employer must pay out all accrued but untaken annual leave in your final pay. This payout is taxed as ordinary income in the period it is received, not at a concessional rate. Unused leave can represent a significant lump sum — someone on $120,000 with 30 days accrued has roughly $13,846 in leave value.",
     ]),
     section("Annual Leave Loading", [
@@ -64,7 +64,7 @@ export const guide = buildGuide(
     },
     {
       question: "How do I calculate the dollar value of my annual leave?",
-      answer: "Divide your annual salary by 260 working days to get your daily rate, then multiply by your leave days. For example, $85,000 ÷ 260 = $326.92 per day. Twenty days of leave is worth approximately $6,538.",
+      answer: "Divide your annual salary by 260 working days to get your daily rate, then multiply by your leave days. For example, $85,000 ÷ 260 = $326.92 per day. Twenty days of leave is worth about $6,538.",
     },
     {
       question: "Is annual leave paid out when I resign?",

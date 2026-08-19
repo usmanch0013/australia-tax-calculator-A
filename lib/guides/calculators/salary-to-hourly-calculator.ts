@@ -3,12 +3,12 @@ import { buildGuide, section } from "../helpers";
 export const guide = buildGuide(
   "salary-to-hourly-calculator",
   "Salary to Hourly Calculator Australia: Guide",
-  "Converting an annual salary to an hourly rate helps Australian workers compare permanent roles with casual, contract, and part-time positions that quote pay by the hour. If you're evaluating a $95,000 package against a $55-per-hour contract, negotiating a rate reduction for part-time hours, or simply curious what your salary works out to per hour, our salary to hourly calculator divides your gross annual income by your weekly hours and 52 weeks. It also estimates your net hourly rate after 2025–26 income tax, the 2% Medicare levy, and HECS repayments, giving you a true per-hour earning figure for fair comparisons across employment types in the Australian labour market.",
+  "Converting an annual salary to an hourly rate helps Aussie workers compare permanent roles with casual, contract, and part-time positions that quote pay by the hour. If you're evaluating a $95,000 package against a $55-per-hour contract, negotiating a rate reduction for part-time hours, or simply curious what your salary works out to per hour, our salary to hourly calculator divides your gross annual income by your weekly hours and 52 weeks. It also estimates your net hourly rate after 2025–26 income tax, the 2% Medicare levy, and HECS repayments, giving you a true per-hour earning figure for fair comparisons across employment types in the Australian labour market.",
   [
     section(
       "What Is a Salary to Hourly Conversion?",
       [
-        "A salary to hourly conversion divides your annual gross salary by the total hours worked per year to produce an equivalent hourly rate. The standard formula is annual salary divided by (hours per week × 52). For a $80,000 salary at 38 hours per week, the hourly rate is $80,000 ÷ 1,976 hours = approximately $40.49 per hour. This conversion normalises salaried pay into hourly terms so you can compare it directly with casual, award, or contract rates.",
+        "A salary to hourly conversion divides your annual gross salary by the total hours worked per year to produce an equivalent hourly rate. The standard formula is annual salary divided by (hours per week × 52). For a $80,000 salary at 38 hours per week, the hourly rate is $80,000 ÷ 1,976 hours = about $40.49 per hour. This conversion normalises salaried pay into hourly terms so you can compare it directly with casual, award, or contract rates.",
         "The gross hourly rate is only half the picture. After income tax under 2025–26 ATO brackets, the 2% Medicare levy, and any HECS repayments, your net hourly rate is significantly lower. Understanding both gross and net hourly equivalents helps you assess whether a salaried role offers better value than hourly alternatives, especially when factoring in leave entitlements, superannuation at 12%, and job security that permanent employment provides.",
       ],
       {
@@ -53,14 +53,14 @@ export const guide = buildGuide(
     section(
       "Worked Example: $95,000 Salary at 38 Hours",
       [
-        "A $95,000 gross annual salary at 38 hours per week produces an hourly rate of $95,000 ÷ 1,976 = $48.08 per hour gross. On a standard 7.6-hour day, that is approximately $365 per day gross. Monthly gross is $7,917 and weekly gross is $1,827. Under 2025–26 tax brackets, income tax is approximately $20,788, plus $1,900 Medicare levy, totalling $22,688 in annual deductions.",
-        "Net annual pay is roughly $72,312, which translates to a net hourly rate of $36.60 per hour — about 24% less than the gross hourly figure. Employer super at 12% contributes an additional $11,400 per year, equivalent to $5.77 per hour in retirement savings on top of cash pay. If this employee had HECS debt at the 4.5% rate, repayments of $4,275 would further reduce the net hourly rate to approximately $34.44 per hour.",
+        "A $95,000 gross annual salary at 38 hours per week produces an hourly rate of $95,000 ÷ 1,976 = $48.08 per hour gross. On a standard 7.6-hour day, that is about $365 per day gross. Monthly gross is $7,917 and weekly gross is $1,827. Under 2025–26 tax brackets, income tax is about $20,788, plus $1,900 Medicare levy, totalling $22,688 in annual deductions.",
+        "Net annual pay is roughly $72,312, which translates to a net hourly rate of $36.60 per hour — about 24% less than the gross hourly figure. Employer super at 12% contributes an additional $11,400 per year, equivalent to $5.77 per hour in retirement savings on top of cash pay. If this employee had HECS debt at the 4.5% rate, repayments of $4,275 would further reduce the net hourly rate to about $34.44 per hour.",
       ]
     ),
     section(
       "Tax Context for Salary to Hourly Conversions",
       [
-        "Your hourly rate derived from an annual salary is taxed identically to direct hourly employment under Australia's progressive tax system. The 2025–26 brackets apply Stage 3 rates: 0% up to $18,200, 16% from $18,201 to $45,000, 30% from $45,001 to $135,000, 37% from $135,001 to $190,000, and 45% above $190,000. The Medicare levy of 2% applies on income above $26,000.",
+        "Your hourly rate derived from an annual salary is taxed identically to direct hourly employment under Australia's tiered tax system. The 2025–26 brackets apply Stage 3 rates: 0% up to $18,200, 16% from $18,201 to $45,000, 30% from $45,001 to $135,000, 37% from $135,001 to $190,000, and 45% above $190,000. The Medicare levy of 2% applies on income above $26,000.",
         "When converting salary to hourly for comparison with contract rates, remember that contractors typically charge a premium of 20% to 40% above equivalent employee hourly rates to cover superannuation (which they pay themselves), annual leave, sick leave, insurance, and business expenses. A $48 gross employee hourly rate might equate to a $65 to $75 contractor rate for the same net outcome. HECS repayments apply equally regardless of how your income is structured.",
       ],
       {

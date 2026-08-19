@@ -8,7 +8,7 @@ export const guide = buildGuide(
     section(
       "What Is Redundancy Pay?",
       [
-        "Redundancy pay is compensation paid to an employee when their position is no longer required and the employee is dismissed as a result. Under the National Employment Standards (NES) in the Fair Work Act 2009, many Australian employees are entitled to a minimum redundancy payment based on their length of continuous service. The payment is calculated in weeks of pay at the employee's base rate for their ordinary hours, not including bonuses, loadings, or overtime unless they form part of ordinary hours.",
+        "Redundancy pay is compensation paid to an employee when their position is no longer required and the employee is dismissed as a result. Under the National Employment Standards (NES) in the Fair Work Act 2009, many Aussie employees are entitled to a minimum redundancy payment based on their length of continuous service. The payment is calculated in weeks of pay at the employee's base rate for their ordinary hours, not including bonuses, loadings, or overtime unless they form part of ordinary hours.",
         "Redundancy is different from resignation, dismissal for misconduct, or the natural end of a fixed-term contract. A genuine redundancy occurs when the employer no longer needs anyone to do your job, or the employer becomes insolvent or bankrupt. The ATO treats genuine redundancy payments more favourably for tax purposes than other termination payments. Your employment contract, enterprise agreement, or company policy may provide more generous redundancy terms than the NES minimum — always check your specific arrangement.",
       ]
     ),

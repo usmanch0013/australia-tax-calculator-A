@@ -1,9 +1,9 @@
 export const SITE = {
-  name: "AU Pay Calculator",
-  tagline: "Australian Salary & Take-Home Pay Calculator",
+  name: "AU Salary After Tax",
+  tagline: "Australian Salary & Take-Home Pay After Tax",
   description:
-    "Work out your take-home pay after tax, Medicare, HECS and super. Free salary and pay calculators for Australia, updated for 2025–26.",
-  url: "https://ausalarycalc.com",
+    "See your salary after tax, Medicare, HECS and super. Free Australian pay calculators — 2025–26 ATO rates, no sign-up.",
+  url: "https://aussalaryaftertax.com",
   year: "2025–26",
 } as const;
 

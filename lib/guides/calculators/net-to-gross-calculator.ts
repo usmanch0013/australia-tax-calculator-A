@@ -8,14 +8,14 @@ export const guide = buildGuide(
     section(
       "What Is a Net to Gross Calculator?",
       [
-        "A net to gross calculator — sometimes called a reverse salary calculator — answers a simple but important question: if I need a certain amount of take-home pay, what gross salary must I earn? Standard pay calculators start with your headline salary and subtract tax. A reverse calculator flips that process. You enter your desired net income and the tool estimates the gross amount required after accounting for Australian income tax, the Medicare levy, and optional HECS/HELP repayments.",
+        "A net to gross calculator — sometimes called a reverse salary calculator — answers a simple but important question: if I need a certain amount of take-home pay, what gross salary must I earn? Standard pay calculators start with your headline salary and subtract tax. A reverse calculator flips that process. You enter your desired net income and the tool estimates the gross amount required after accounting for income tax, the Medicare levy, and optional HECS/HELP repayments.",
         "This matters because most Australians think in terms of what lands in their account each fortnight, not the pre-tax figure on a contract or job ad. A worker who needs $5,000 per month after tax cannot simply multiply that figure by twelve and call it their salary requirement. Tax is not a flat percentage — it rises in steps as income increases. Someone targeting $60,000 net might need a gross salary closer to $75,000 or higher depending on HECS status and other deductions. The net to gross calculator removes that guesswork using current ATO brackets for the 2025–26 financial year.",
       ]
     ),
     section(
       "How Reverse Salary Calculations Work in Australia",
       [
-        "Australian take-home pay is gross income minus PAYG income tax, minus the 2% Medicare levy for most residents, minus any compulsory HECS/HELP repayment if your repayment income exceeds the threshold (approximately $54,435 in 2025–26). Because each of these components scales differently with income, there is no single multiplier you can apply to convert net to gross. Instead, the calculator uses an iterative approach: it tests different gross amounts until the resulting net pay matches your target.",
+        "Australian take-home pay is gross income minus PAYG income tax, minus the 2% Medicare levy for most residents, minus any compulsory HECS/HELP repayment if your repayment income exceeds the threshold (about $54,435 in 2025–26). Because each of these components scales differently with income, there is no single multiplier you can apply to convert net to gross. Instead, the calculator uses an iterative approach: it tests different gross amounts until the resulting net pay matches your target.",
         "Under the 2025–26 tax scales — which include the Stage 3 tax cuts — income between $18,201 and $45,000 is taxed at 16%, income between $45,001 and $135,000 at 30%, and higher brackets apply at 37% and 45%. The Medicare levy is generally 2% of taxable income once you exceed the low-income threshold of around $26,000. HECS repayments use a separate graduated scale from 1% up to 10% of repayment income. Each layer pushes the required gross figure higher, which is why a quick mental estimate often falls short.",
       ],
       {
@@ -53,7 +53,7 @@ export const guide = buildGuide(
     section(
       "Worked Example: Targeting $60,000 Take-Home Pay",
       [
-        "Suppose you need $60,000 per year in your bank account after all PAYG withholding — roughly $5,000 per month or $2,308 per fortnight. Without a HECS debt, the net to gross calculator estimates you need a gross salary of approximately $74,800. On that income, income tax under 2025–26 brackets comes to around $13,228, the Medicare levy adds roughly $1,496, and total tax is approximately $14,724. Subtracting that from $74,800 leaves about $60,076 in take-home pay.",
+        "Suppose you need $60,000 per year in your bank account after all PAYG withholding — roughly $5,000 per month or $2,308 per fortnight. Without a HECS debt, the net to gross calculator estimates you need a gross salary of about $74,800. On that income, income tax under 2025–26 brackets comes to around $13,228, the Medicare levy adds roughly $1,496, and total tax is about $14,724. Subtracting that from $74,800 leaves about $60,076 in take-home pay.",
         "Now add a HECS debt. The same $60,000 net target might require a gross salary closer to $78,500 or more, because HECS repayments at the applicable rate are withheld on top of income tax and Medicare. At a repayment income in the mid-range brackets, an extra 4–5% of income goes to HELP repayments. The gap between gross and net widens further at higher income levels. Someone targeting $100,000 net without HECS might need gross income above $145,000, reflecting the 37% marginal rate and 2% Medicare on income above $135,000.",
       ]
     ),
@@ -61,7 +61,7 @@ export const guide = buildGuide(
       "2025–26 Tax Context and Stage 3 Cuts",
       [
         "The 2025–26 financial year continues the Stage 3 personal income tax cuts that took effect from 1 July 2024. The key change for most workers is the 16% rate on income between $18,201 and $45,000 (reduced from 19%) and the 30% rate on income between $45,001 and $135,000 (reduced from 32.5%). These lower rates mean you need slightly less gross income to achieve the same net pay compared to pre-Stage 3 scales — a useful point when comparing old salary guides or overseas advice.",
-        "The tax-free threshold remains at $18,200, meaning no income tax on the first $18,200 of taxable income. The Low Income Tax Offset (LITO) of up to $700 further reduces tax for earners under approximately $66,667, though our calculator focuses on standard PAYG scenarios. The superannuation guarantee increased to 12% from 1 July 2025, but employer super is typically paid on top of your salary and does not reduce take-home pay unless your contract specifies a total package inclusive of super.",
+        "The tax-free threshold remains at $18,200, meaning no income tax on the first $18,200 of taxable income. The Low Income Tax Offset (LITO) of up to $700 further reduces tax for earners under about $66,667, though our calculator focuses on standard PAYG scenarios. The superannuation guarantee increased to 12% from 1 July 2025, but employer super is typically paid on top of your salary and does not reduce take-home pay unless your contract specifies a total package inclusive of super.",
       ]
     ),
     section(
@@ -105,7 +105,7 @@ export const guide = buildGuide(
     {
       question: "Should I include HECS in my net to gross calculation?",
       answer:
-        "Yes, if you have an outstanding HELP debt and your income will exceed the repayment threshold of approximately $54,435 in 2025–26. HECS repayments are compulsory and withheld through PAYG alongside income tax. Omitting them will underestimate the gross salary you need and overstate your likely take-home pay.",
+        "Yes, if you have an outstanding HELP debt and your income will exceed the repayment threshold of about $54,435 in 2025–26. HECS repayments are compulsory and withheld through PAYG alongside income tax. Omitting them will underestimate the gross salary you need and overstate your likely take-home pay.",
     },
     {
       question: "Is net to gross the same as adding 30% tax?",

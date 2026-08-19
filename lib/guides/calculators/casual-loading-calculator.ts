@@ -21,7 +21,7 @@ export const guide = buildGuide(
       ],
     }),
     section("Casual Loading Under Modern Awards", [
-      "Most Australian employees are covered by a modern award that sets minimum pay rates and conditions for their industry. Awards specify the base classification rate and the casual loading percentage. While 25% is the most common loading under the Fair Work Act, individual awards may differ. The General Retail Industry Award, Hospitality Award, and Health Professionals Award all typically apply 25% casual loading on the relevant classification rate.",
+      "Most Aussie employees are covered by a modern award that sets minimum pay rates and conditions for their industry. Awards specify the base classification rate and the casual loading percentage. While 25% is the most common loading under the Fair Work Act, individual awards may differ. The General Retail Industry Award, Hospitality Award, and Health Professionals Award all typically apply 25% casual loading on the relevant classification rate.",
       "Enterprise agreements can override award rates if they pass the Better Off Overall Test (BOOT), sometimes setting different loadings or combining loading with other benefits. Always check your specific award or agreement on the Fair Work Commission website. Your payslip should show your classification, base rate, loading, and resulting casual rate.",
     ]),
     section("Using the Casual Loading Calculator", [
@@ -41,7 +41,7 @@ export const guide = buildGuide(
       "Employers can refuse conversion on reasonable grounds, such as significant changes to the employee's hours or the work being genuinely irregular. Some awards also include casual conversion clauses with specific procedures. If you work consistent full-time hours as a casual, conversion to permanent employment may provide leave entitlements and job security while potentially reducing your hourly rate by removing the loading.",
     ]),
     section("Comparing Casual vs Permanent Pay", [
-      "A common question is whether casual work pays more overall than permanent work. The 25% loading is designed to compensate for roughly four weeks of annual leave (20 days) and approximately ten days of personal leave that permanent employees receive. On paper, the loading roughly offsets the value of paid leave, but the comparison depends on how many hours you actually work and whether you use leave entitlements as a permanent employee.",
+      "A common question is whether casual work pays more overall than permanent work. The 25% loading is designed to compensate for roughly four weeks of annual leave (20 days) and about ten days of personal leave that permanent employees receive. On paper, the loading roughly offsets the value of paid leave, but the comparison depends on how many hours you actually work and whether you use leave entitlements as a permanent employee.",
       "Casuals who work full-time hours year-round often earn more gross income than permanent colleagues on the same base rate, because the loading applies to every hour. However, during quiet periods when hours are cut, casual income can drop sharply with no paid leave to fall back on. Permanent employees have income stability and paid leave but a lower hourly rate. Model both scenarios using your actual hours and leave needs.",
     ]),
     section("Penalty Rates and Casual Loading", [

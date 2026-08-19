@@ -3,12 +3,12 @@ import { buildGuide, section } from "../helpers";
 export const guide = buildGuide(
   "medicare-levy-calculator",
   "Medicare Levy Calculator Australia: Guide for 2025–26",
-  "The Medicare levy is a 2% charge on most Australian residents' taxable income, funding the public healthcare system. A medicare levy calculator shows how much you owe, whether you qualify for a full exemption or reduction, and how the levy fits alongside income tax and HECS on your pay slip. For the 2025–26 financial year, low-income earners below approximately $26,000 may pay nothing, while higher earners without private hospital cover may face an additional Medicare Levy Surcharge. Here's how the levy works, who pays it, how reductions apply, and how to use a medicare levy calculator with our income tax calculator and gross to net calculator for accurate take-home pay estimates.",
+  "The Medicare levy is a 2% charge on most Australian residents' taxable income, funding the public healthcare system. A medicare levy calculator shows how much you owe, whether you qualify for a full exemption or reduction, and how the levy fits alongside income tax and HECS on your pay slip. For the 2025–26 financial year, low-income earners below about $26,000 may pay nothing, while higher earners without private hospital cover may face an additional Medicare Levy Surcharge. Here's how the levy works, who pays it, how reductions apply, and how to use a medicare levy calculator with our income tax calculator and gross to net calculator for accurate take-home pay estimates.",
   [
     section(
       "What Is the Medicare Levy?",
       [
-        "The Medicare levy is a tax levied on Australian residents to help fund Medicare, Australia's universal public health insurance scheme. It provides access to subsidised medical services, public hospital care, and the Pharmaceutical Benefits Scheme. For most taxpayers, the levy is 2% of taxable income for the 2025–26 financial year. It is collected alongside income tax through the PAYG withholding system — your employer deducts it from each pay and remits it to the Australian Taxation Office.",
+        "The Medicare levy is a tax levied on Australian residents to help fund Medicare, Australia's universal public health insurance scheme. It provides access to subsidised medical services, public hospital care, and the Pharmaceutical Benefits Scheme. For most taxpayers, the levy is 2% of taxable income for the 2025–26 financial year. It is collected alongside income tax through the PAYG withholding system — your employer deducts it from each pay and remits it to the ATO.",
         "The Medicare levy is separate from income tax although it appears combined on pay slips and annual income statements. It is calculated on taxable income, the same base used for income tax after allowable deductions. Unlike HECS repayments, which only apply above a threshold, most workers above the low-income exemption pay the full 2%. A medicare levy calculator takes your taxable income and applies the relevant rate, exemption, or reduction to show your levy amount and annual cost.",
       ]
     ),
@@ -21,7 +21,7 @@ export const guide = buildGuide(
       {
         list: [
           "Standard rate: 2% of taxable income",
-          "Low-income exemption: no levy below approximately $26,000",
+          "Low-income exemption: no levy below about $26,000",
           "Reduction: partial levy for incomes in the shade-in range",
           "Exemptions: certain pensioners, blind taxpayers, and foreign residents",
           "Medicare Levy Surcharge: additional 1–1.5% for high earners without private hospital cover",
@@ -62,13 +62,13 @@ export const guide = buildGuide(
       "Worked Examples: Levy at Different Income Levels",
       [
         "A part-time worker earning $24,000 taxable income falls below the $26,000 threshold and pays no Medicare levy. Their income tax is also minimal — only the portion above $18,200 is taxed at 16%. Total tax is roughly $928 income tax plus $0 Medicare, leaving take-home around $23,072 before any other deductions.",
-        "A full-time employee on $60,000 pays $1,200 in Medicare levy (2% of $60,000) plus approximately $7,788 in income tax, for total tax around $8,988. On $100,000, the levy is $2,000 — a meaningful line item that many people forget when quoting their tax rate as just income tax. At $150,000, Medicare adds $3,000 on top of approximately $39,288 income tax. High earners without private hospital cover earning above $93,000 may owe an additional 1% to 1.5% MLS on top of the standard levy, potentially adding $930 to $1,395 or more depending on income tier.",
+        "A full-time employee on $60,000 pays $1,200 in Medicare levy (2% of $60,000) plus about $7,788 in income tax, for total tax around $8,988. On $100,000, the levy is $2,000 — a meaningful line item that many people forget when quoting their tax rate as just income tax. At $150,000, Medicare adds $3,000 on top of about $39,288 income tax. High earners without private hospital cover earning above $93,000 may owe an additional 1% to 1.5% MLS on top of the standard levy, potentially adding $930 to $1,395 or more depending on income tier.",
       ]
     ),
     section(
       "Medicare Levy Reduction and Exemption Rules",
       [
-        "The low-income exemption means taxpayers below the threshold pay no Medicare levy. For 2025–26, this threshold is approximately $26,000 for singles without dependants. Families have higher thresholds based on the number of dependent children. The shade-in range above the exemption threshold phases in the levy gradually — you do not suddenly owe 2% on all income the moment you exceed the limit.",
+        "The low-income exemption means taxpayers below the threshold pay no Medicare levy. For 2025–26, this threshold is about $26,000 for singles without dependants. Families have higher thresholds based on the number of dependent children. The shade-in range above the exemption threshold phases in the levy gradually — you do not suddenly owe 2% on all income the moment you exceed the limit.",
         "Full exemptions apply to certain categories regardless of income: blind taxpayers, those entitled to full Medicare levy exemption certificates, and foreign residents. Partial exemptions exist for seniors and pensioners above specific age and income combinations. Medical expenses may qualify for the Medicare levy reduction in limited circumstances through the tax return. Because rules vary by family status and income source, the calculator provides estimates for standard single-employee scenarios; complex cases warrant professional advice or the ATO's detailed worksheets.",
       ]
     ),
@@ -90,7 +90,7 @@ export const guide = buildGuide(
       "Related Tools and Take-Home Pay Context",
       [
         "The Medicare levy is one layer in Australia's PAYG system. An income tax calculator shows the bracket-based income tax component. A hecs calculator adds compulsory HELP repayments when repayment income exceeds $54,435. A gross to net calculator or take-home pay calculator combines all three for realistic net pay figures. If you think in net terms, a net to gross calculator works backwards from your desired take-home amount.",
-        "For complete salary planning, also consider the 12% superannuation guarantee paid by employers — usually on top of salary and not deducted from take-home pay. Salary sacrifice arrangements reduce taxable income and therefore reduce both income tax and Medicare levy, since both are calculated on the lower taxable base. A salary sacrifice calculator models those savings. Bonus income attracts Medicare levy at 2% on the bonus amount alongside marginal income tax — see our bonus tax calculator for illustrations.",
+        "For complete salary planning, also consider the 12% superannuation guarantee paid by employers — usually on top of salary and not deducted from take-home pay. Salary sacrifice arrangements reduce taxable income and so reduce both income tax and Medicare levy, since both are calculated on the lower taxable base. A salary sacrifice calculator models those savings. Bonus income attracts Medicare levy at 2% on the bonus amount alongside marginal income tax — see our bonus tax calculator for illustrations.",
       ]
     ),
   ],
@@ -98,12 +98,12 @@ export const guide = buildGuide(
     {
       question: "How much is the Medicare levy in Australia for 2025–26?",
       answer:
-        "The standard Medicare levy is 2% of taxable income for Australian residents. On $80,000 taxable income, that is $1,600 per year. Low-income earners below approximately $26,000 may be fully exempt, and those in the shade-in range may pay a reduced rate. The levy is collected through PAYG withholding alongside income tax.",
+        "The standard Medicare levy is 2% of taxable income for Australian residents. On $80,000 taxable income, that is $1,600 per year. Low-income earners below about $26,000 may be fully exempt, and those in the shade-in range may pay a reduced rate. The levy is collected through PAYG withholding alongside income tax.",
     },
     {
       question: "Who is exempt from the Medicare levy?",
       answer:
-        "Taxpayers with taxable income below the low-income threshold (approximately $26,000 for singles in 2025–26) are generally exempt. Full exemptions also apply to certain blind taxpayers, foreign residents for tax purposes, and those with approved Medicare levy exemption certificates. Seniors and pensioners may qualify for exemptions or reductions based on age and income.",
+        "Taxpayers with taxable income below the low-income threshold (about $26,000 for singles in 2025–26) are generally exempt. Full exemptions also apply to certain blind taxpayers, foreign residents for tax purposes, and those with approved Medicare levy exemption certificates. Seniors and pensioners may qualify for exemptions or reductions based on age and income.",
     },
     {
       question: "Is the Medicare levy the same as the Medicare Levy Surcharge?",

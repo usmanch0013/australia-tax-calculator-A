@@ -3,12 +3,12 @@ import { buildGuide, section } from "../helpers";
 export const guide = buildGuide(
   "division-293-calculator",
   "Division 293 Tax on Super in Australia (2025–26)",
-  "High-income earners in Australia face an additional tax charge on their superannuation contributions called Division 293 tax. If your income plus concessional super contributions exceed $250,000 in a financial year, the ATO levies an extra 15% tax on some or all of those concessional contributions — on top of the 15% contributions tax already paid inside your super fund. We'll cover who Division 293 affects, how the $250,000 threshold is calculated, what counts as income for Division 293 purposes, and how to estimate your liability using our Division 293 calculator for the 2025–26 financial year.",
+  "High-income earners in Australia face an additional tax charge on their superannuation contributions called Division 293 tax. If your income plus concessional super contributions exceed $250,000 in a financial year, the ATO levies an extra 15% tax on some or all of those concessional contributions — on top of the 15% contributions tax already paid inside your super fund. We'll cover who Division 293 affects, how the $250,000 threshold is calculated, what counts as income for Division 293 purposes, and how to estimate your liability using the Division 293 calculator for the 2025–26 financial year.",
   [
     section(
       "What Is Division 293 Tax?",
       [
-        "Division 293 tax is an additional 15% levy on concessional super contributions for individuals whose income for surcharge purposes exceeds $250,000. It was introduced to reduce the tax concession enjoyed by very high-income earners on super contributions. Concessional contributions — including employer super guarantee, salary sacrifice, and personal deductible contributions — are normally taxed at 15% within the super fund, which is below the marginal tax rates of 30%, 37%, or 45% that high earners would otherwise pay.",
+        "Division 293 tax is an additional 15% levy on concessional super contributions for people whose income for surcharge purposes exceeds $250,000. It was introduced to reduce the tax concession enjoyed by very high-income earners on super contributions. Concessional contributions — including employer super guarantee, salary sacrifice, and personal deductible contributions — are normally taxed at 15% within the super fund, which is below the marginal tax rates of 30%, 37%, or 45% that high earners would otherwise pay.",
         "Division 293 partially closes this gap by taxing the higher-income portion of concessional contributions at an effective 30% (15% in the fund plus 15% Division 293). The tax is levied on the individual, not the super fund, and is typically raised as an assessment after you lodge your tax return. You can choose to pay from personal funds or release money from your super account to cover the liability. Understanding whether you are affected helps you plan salary sacrifice strategies and avoid unexpected tax bills.",
       ]
     ),
@@ -69,7 +69,7 @@ export const guide = buildGuide(
     section(
       "Worked Example: $200,000 Salary with $40,000 Sacrifice",
       [
-        "A senior executive earns $200,000 taxable income and salary sacrifices $40,000 to super. Employer SG is 12% of the reduced salary base — if sacrifice is from gross, the calculation can be complex, but assume total concessional contributions are approximately $40,000 sacrifice plus employer SG on remaining salary. For simplicity, say total concessional contributions are $52,000 (this would exceed the cap and need adjustment in reality).",
+        "A senior executive earns $200,000 taxable income and salary sacrifices $40,000 to super. Employer SG is 12% of the reduced salary base — if sacrifice is from gross, the calculation can be complex, but assume total concessional contributions are about $40,000 sacrifice plus employer SG on remaining salary. For simplicity, say total concessional contributions are $52,000 (this would exceed the cap and need adjustment in reality).",
         "Income for Division 293 purposes: $200,000 + $52,000 = $252,000. Excess over threshold: $2,000. Division 293 taxable amount: minimum of $52,000 and $2,000 = $2,000. Division 293 tax: $300. In practice, this employee should also watch the concessional contributions cap. The example shows that even modest threshold breaches trigger Division 293, and aggressive salary sacrifice near the threshold requires careful modelling.",
       ]
     ),
@@ -100,7 +100,7 @@ export const guide = buildGuide(
       "Common Mistakes and Related Scenarios",
       [
         "People often check only their salary against $250,000 and miss that super contributions and fringe benefits are added back. Another mistake is assuming Division 293 replaces contributions tax — both apply. Some believe the threshold is indexed with tax brackets; it has remained at $250,000. Others forget that multiple employers' contributions all count toward concessional totals and Division 293 income.",
-        "Division 293 interacts with other high-income measures including the Medicare levy surcharge (if you earn above $93,000 single without private health insurance) and the highest marginal tax rate at $190,001. For a complete super picture, use The super calculator above for employer SG, our salary sacrifice calculator for pre-tax contributions, and our income tax calculator for your marginal rate. Together they help high earners optimise their total tax position.",
+        "Division 293 interacts with other high-income measures including the Medicare levy surcharge (if you earn above $93,000 single without private health insurance) and the highest marginal tax rate at $190,001. For a complete super picture, use The super calculator above for employer SG, our salary sacrifice calculator for pre-tax contributions, and our income tax calculator for your marginal rate. Together they help high earners improve their total tax position.",
       ]
     ),
   ],

@@ -9,13 +9,13 @@ import "./globals.css";
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#6b2737",
+  themeColor: "#14532d",
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `Australian Salary Calculator ${SITE.year} — Free Pay & Tax Calculator`,
+    default: `Australian Salary After Tax ${SITE.year} — Free Pay Calculator`,
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     canonical: SITE.url,
   },
   openGraph: {
-    title: `Australian Salary & Pay Calculator ${SITE.year}`,
+    title: `Australian Salary & Pay After Tax ${SITE.year}`,
     description: SITE.description,
     type: "website",
     locale: "en_AU",

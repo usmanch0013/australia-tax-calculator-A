@@ -13,27 +13,33 @@ export default function PopularSalaries() {
           take-home pay calculator result for {SITE.year}.
         </p>
 
-        <div className="salary-chips">
+        <div className="salary-grid">
           {POPULAR_SALARIES.map((amount) => (
             <Link
               key={amount}
               href={`/salary/${amount}`}
-              className="salary-chip"
+              className="salary-grid__item"
             >
-              ${amount.toLocaleString("en-AU")}
+              <span className="salary-grid__amount">
+                ${amount.toLocaleString("en-AU")}
+              </span>
+              <span className="salary-grid__label">after tax</span>
             </Link>
           ))}
         </div>
 
         <p className="site-section__label">High-income calculations</p>
-        <div className="salary-chips">
+        <div className="salary-grid">
           {HIGH_INCOME_SALARIES.map((amount) => (
             <Link
               key={amount}
               href={`/salary/${amount}`}
-              className="salary-chip salary-chip--muted"
+              className="salary-grid__item salary-grid__item--muted"
             >
-              ${amount.toLocaleString("en-AU")}
+              <span className="salary-grid__amount">
+                ${amount.toLocaleString("en-AU")}
+              </span>
+              <span className="salary-grid__label">after tax</span>
             </Link>
           ))}
         </div>

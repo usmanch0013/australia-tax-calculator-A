@@ -3,13 +3,13 @@ import { buildGuide, section } from "../helpers";
 export const guide = buildGuide(
   "gross-to-net-calculator",
   "Gross to Net Salary Calculator Australia: Guide",
-  "A gross to net calculator shows exactly how much of your salary you keep after Australian income tax, the Medicare levy, and HECS repayments are deducted. Gross pay is what appears on your employment contract; net pay is what lands in your bank account. Understanding the gap between these figures is fundamental to budgeting, comparing job offers, and planning your financial future. Our gross to net calculator applies the 2025–26 ATO tax brackets — including Stage 3 tax cuts — the 2% Medicare levy on income above $26,000, and current HECS repayment thresholds to produce a detailed deduction breakdown and your exact take-home pay across weekly, fortnightly, monthly, and annual pay cycles.",
+  "A gross to net calculator shows exactly how much of your salary you keep after income tax, the Medicare levy, and HECS repayments are deducted. Gross pay is what appears on your employment contract; net pay is what lands in your bank account. Understanding the gap between these figures is fundamental to budgeting, comparing job offers, and planning your financial future. Our gross to net calculator applies the 2025–26 ATO tax brackets — including Stage 3 tax cuts — the 2% Medicare levy on income above $26,000, and current HECS repayment thresholds to produce a detailed deduction breakdown and your exact take-home pay across weekly, fortnightly, monthly, and annual pay cycles.",
   [
     section(
       "What Does Gross to Net Mean?",
       [
-        "Gross to net refers to the conversion of your pre-tax salary (gross) to your after-tax take-home pay (net). The difference between gross and net is determined by mandatory deductions withheld through the PAYG system: income tax calculated using progressive tax brackets, the Medicare levy at 2%, and compulsory HECS or HELP repayments if you have a student loan. Optional deductions like salary sacrifice, union fees, or private health insurance further reduce net pay but are not part of the standard gross to net calculation.",
-        "The gross to net gap varies significantly with income. At $50,000 gross, you might take home around $42,000 — losing roughly 16% to tax and Medicare. At $150,000 gross, take-home pay is closer to $103,000 — an effective deduction rate near 31%. Australia's progressive tax system means higher earners lose a larger percentage of gross pay to tax, making gross to net calculations essential at every income level for accurate financial planning.",
+        "Gross to net refers to the conversion of your pre-tax salary (gross) to your after-tax take-home pay (net). The difference between gross and net is determined by deductions your employer takes out withheld through the PAYG system: income tax calculated using progressive tax brackets, the Medicare levy at 2%, and compulsory HECS or HELP repayments if you have a student loan. Optional deductions like salary sacrifice, union fees, or private health insurance further reduce net pay but are not part of the standard gross to net calculation.",
+        "The gross to net gap varies significantly with income. At $50,000 gross, you might take home around $42,000 — losing roughly 16% to tax and Medicare. At $150,000 gross, take-home pay is closer to $103,000 — an effective deduction rate near 31%. Australia's tiered tax system means higher earners lose a larger percentage of gross pay to tax, making gross to net calculations essential at every income level for accurate financial planning.",
       ],
       {
         list: [
@@ -30,7 +30,7 @@ export const guide = buildGuide(
     section(
       "When to Use a Gross to Net Calculator",
       [
-        "Use a gross to net calculator whenever you need to see the complete deduction picture from a gross salary figure. This is the most detailed tax breakdown tool available for Australian employees, showing every component — income tax, Medicare, HECS — as a separate line item rather than a single combined deduction. It is ideal when you want to understand exactly where your money goes between gross and net.",
+        "Use a gross to net calculator whenever you need to see the complete deduction picture from a gross salary figure. This is the most detailed tax breakdown tool available for Aussie employees, showing every component — income tax, Medicare, HECS — as a separate line item rather than a single combined deduction. It is ideal when you want to understand exactly where your money goes between gross and net.",
         "The calculator is particularly useful before accepting a job offer, during salary negotiations, when planning a budget based on a new income level, or when verifying that your payslip deductions are correct. If you are deciding whether to salary sacrifice into super, the gross to net calculator helps you model how reducing taxable income affects each deduction line and your resulting net pay. For a simpler net pay focus, our take-home pay calculator provides similar results with emphasis on pay cycle amounts.",
       ],
       {
@@ -54,7 +54,7 @@ export const guide = buildGuide(
       "Worked Example: $120,000 Gross to Net",
       [
         "Starting with $120,000 gross annual salary and no HECS debt: the first $18,200 is tax-free. Income from $18,201 to $45,000 ($26,800) is taxed at 16%, producing $4,288. The portion from $45,001 to $120,000 ($75,000) is taxed at 30%, adding $22,500. Total income tax is $26,788. The Medicare levy at 2% on $120,000 adds $2,400. Total deductions are $29,188.",
-        "Net annual pay is $90,812 — approximately $1,746 per week, $3,493 per fortnight, or $7,568 per month. The effective tax rate is about 24.3% of gross income. Employer super at 12% contributes an additional $14,400 per year. If HECS applied at the 5.5% rate (income between $94,503 and $100,174), repayments of $6,600 would reduce net pay to $84,212 annually. This example demonstrates how the gross to net calculator isolates each deduction for clear visibility.",
+        "Net annual pay is $90,812 — about $1,746 per week, $3,493 per fortnight, or $7,568 per month. The effective tax rate is about 24.3% of gross income. Employer super at 12% contributes an additional $14,400 per year. If HECS applied at the 5.5% rate (income between $94,503 and $100,174), repayments of $6,600 would reduce net pay to $84,212 annually. This example shows how the gross to net calculator isolates each deduction for clear visibility.",
       ]
     ),
     section(
@@ -86,7 +86,7 @@ export const guide = buildGuide(
       "Who Benefits Most from a Gross to Net Calculator?",
       [
         "Anyone who wants maximum transparency into their tax deductions benefits from the gross to net calculator's line-by-line breakdown. High-income earners approaching bracket thresholds — particularly the $45,000, $135,000, and $190,000 boundaries — can see exactly how much tax each income segment attracts. Graduates with HECS debt can toggle repayments on and off to understand the dollar impact on their net pay at their current income level.",
-        "Financial planners, mortgage brokers, and HR professionals use gross to net calculations to help clients and employees understand their true earning capacity. Workers considering salary sacrifice into super can model how reducing taxable income by $10,000 or $20,000 affects each tax component and net pay. The calculator serves as the most full tax breakdown tool on this site, complementing the take-home pay calculator and pay calculator for different presentation preferences.",
+        "Financial planners, mortgage brokers, and HR professionals use gross to net calculations to help clients and employees understand their true earning capacity. Workers considering salary sacrifice into super can model how reducing taxable income by $10,000 or $20,000 affects each tax component and net pay. The calculator serves as the most full tax breakdown tool here, complementing the take-home pay calculator and pay calculator for different presentation preferences.",
       ]
     ),
     section(
@@ -110,12 +110,12 @@ export const guide = buildGuide(
     {
       question: "What is the difference between gross and net salary?",
       answer:
-        "Gross salary is your total pay before deductions. Net salary (take-home pay) is what remains after income tax, the 2% Medicare levy, and any HECS repayments. On a $80,000 gross salary, net pay is approximately $62,000 to $64,000 depending on HECS status.",
+        "Gross salary is your total pay before deductions. Net salary (take-home pay) is what remains after income tax, the 2% Medicare levy, and any HECS repayments. On a $80,000 gross salary, net pay is about $62,000 to $64,000 depending on HECS status.",
     },
     {
       question: "How much tax is taken out of a $90,000 salary?",
       answer:
-        "On $90,000 gross in 2025–26, income tax is approximately $19,288, plus $1,800 Medicare levy. Total deductions are around $21,088 before HECS, leaving net pay of roughly $68,912. With HECS at 3%, an additional $2,700 in repayments reduces net pay to about $66,212.",
+        "On $90,000 gross in 2025–26, income tax is about $19,288, plus $1,800 Medicare levy. Total deductions are around $21,088 before HECS, leaving net pay of roughly $68,912. With HECS at 3%, an additional $2,700 in repayments reduces net pay to about $66,212.",
     },
     {
       question: "Does the gross to net calculator include Medicare and HECS?",

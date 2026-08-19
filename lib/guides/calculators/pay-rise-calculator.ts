@@ -8,7 +8,7 @@ export const guide = buildGuide(
     section(
       "What Is a Pay Rise Calculator?",
       [
-        "A pay rise calculator estimates how much extra money you will actually receive in your bank account after a salary increase. You enter your current gross annual salary, the percentage or dollar increase, and optionally whether you have a HECS/HELP debt. The tool applies Australian income tax brackets for 2025–26, the 2% Medicare levy, and graduated HECS repayment rates to show your before-and-after take-home pay, the tax charged on the increase itself, and what percentage of the gross rise you keep.",
+        "A pay rise calculator estimates how much extra money you will actually receive in your bank account after a salary increase. You enter your current gross annual salary, the percentage or dollar increase, and optionally whether you have a HECS/HELP debt. The tool applies income tax brackets for 2025–26, the 2% Medicare levy, and graduated HECS repayment rates to show your before-and-after take-home pay, the tax charged on the increase itself, and what percentage of the gross rise you keep.",
         "Unlike a simple percentage calculator that multiplies your salary by 1.05, a proper pay rise calculator accounts for progressive taxation. As your income rises, you may move into a higher marginal tax bracket, meaning a larger share of the increase goes to the ATO. For someone earning $90,000 who receives a 5% rise to $94,500, the extra $4,500 gross might only translate to around $2,800–$3,100 net depending on HECS status — a meaningful difference when planning mortgage repayments or household budgets.",
       ]
     ),
@@ -57,8 +57,8 @@ export const guide = buildGuide(
     section(
       "Worked Example: 5% Rise on $85,000",
       [
-        "Consider an employee earning $85,000 gross with no HECS debt. A 5% pay rise brings their salary to $89,250 — an increase of $4,250. Under 2025–26 tax rates, their current total tax (income tax plus Medicare) is approximately $18,967, leaving a take-home of about $66,033. After the rise, total tax increases to roughly $20,347, giving a new take-home of approximately $68,903.",
-        "The net increase is around $2,870 per year, or about $110 per fortnight. Of the $4,250 gross rise, the employee keeps roughly 67.5%. The remaining 32.5% goes to income tax and Medicare. If this employee had HECS, the effective retention rate would be lower because repayment income also rises. At $89,250, the HECS rate is 2.5%, adding approximately $2,231 in annual repayments compared to 2% at $85,000 — an extra $446 per year beyond the tax already calculated on the rise.",
+        "Say you earning $85,000 gross with no HECS debt. A 5% pay rise brings their salary to $89,250 — an increase of $4,250. Under 2025–26 tax rates, their current total tax (income tax plus Medicare) is about $18,967, leaving a take-home of about $66,033. After the rise, total tax increases to roughly $20,347, giving a new take-home of about $68,903.",
+        "The net increase is around $2,870 per year, or about $110 per fortnight. Of the $4,250 gross rise, the employee keeps roughly 67.5%. The remaining 32.5% goes to income tax and Medicare. If this employee had HECS, the effective retention rate would be lower because repayment income also rises. At $89,250, the HECS rate is 2.5%, adding about $2,231 in annual repayments compared to 2% at $85,000 — an extra $446 per year beyond the tax already calculated on the rise.",
       ]
     ),
     section(

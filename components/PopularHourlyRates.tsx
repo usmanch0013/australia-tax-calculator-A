@@ -13,14 +13,15 @@ export default function PopularHourlyRates() {
           38-hour week and {SITE.year} tax rates.
         </p>
 
-        <div className="salary-chips">
+        <div className="salary-grid salary-grid--hourly">
           {POPULAR_HOURLY_RATES.map((rate) => (
             <Link
               key={rate}
               href={`/hourly/${rate}`}
-              className="salary-chip"
+              className="salary-grid__item"
             >
-              ${rate}/hr after tax
+              <span className="salary-grid__amount">${rate}</span>
+              <span className="salary-grid__label">per hour after tax</span>
             </Link>
           ))}
         </div>

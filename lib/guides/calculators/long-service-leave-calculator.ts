@@ -3,7 +3,7 @@ import { buildGuide, section } from "../helpers";
 export const guide = buildGuide(
   "long-service-leave-calculator",
   "Long Service Leave in Australia (2025–26)",
-  "Long service leave is one of the most valuable — and least understood — entitlements for Australian workers. After years of continuous service with one employer, you may be entitled to extended paid leave that can be taken during employment or paid out when you leave. Rules vary significantly between states, territories, and industries, making it difficult to know what you are owed. Here's how long service leave accrues across Australia, how to calculate its dollar value, and how to use our long service leave calculator to estimate your entitlement based on years of service and salary.",
+  "Long service leave is one of the most valuable — and least understood — entitlements for Aussie workers. After years of continuous service with one employer, you may be entitled to extended paid leave that can be taken during employment or paid out when you leave. Rules vary significantly between states, territories, and industries, making it difficult to know what you are owed. Here's how long service leave accrues across Australia, how to calculate its dollar value, and how to use our long service leave calculator to estimate your entitlement based on years of service and salary.",
   [
     section(
       "What Is Long Service Leave?",
@@ -15,7 +15,7 @@ export const guide = buildGuide(
     section(
       "How Long Service Leave Accrues by State",
       [
-        "In New South Wales and Victoria, employees accrue long service leave at approximately 1/60th of their period of service — equivalent to about 8.67 weeks after ten years, or roughly 0.867 weeks per year of service. After the initial qualifying period (10 years in NSW, 7 years in Victoria for taking leave), employees can access their accrued LSL. Queensland provides 8.667 weeks after 10 years. South Australia offers 13 weeks after 10 years and 1.3 weeks per year thereafter.",
+        "In New South Wales and Victoria, employees accrue long service leave at about 1/60th of their period of service — equivalent to about 8.67 weeks after ten years, or roughly 0.867 weeks per year of service. After the initial qualifying period (10 years in NSW, 7 years in Victoria for taking leave), employees can access their accrued LSL. Queensland provides 8.667 weeks after 10 years. South Australia offers 13 weeks after 10 years and 1.3 weeks per year thereafter.",
         "Western Australia provides 8.667 weeks after 10 years under the state Long Service Leave Act. Tasmania grants 8.667 weeks after 10 years. The ACT and Northern Territory each have their own schemes with similar but not identical accrual rates. Because rules differ, two employees with identical salaries and years of service in different states may have different entitlements. Our calculator uses the 0.867 weeks per year rate as a representative estimate for NSW/VIC-style accrual.",
       ],
       {
@@ -32,7 +32,7 @@ export const guide = buildGuide(
     section(
       "Calculating the Dollar Value of Long Service Leave",
       [
-        "The dollar value of your long service leave depends on two factors: how many weeks you have accrued, and your ordinary weekly rate of pay. Weekly pay is typically your base salary divided by 52, or your average weekly earnings over a reference period if your pay varies. For a full-time employee on $85,000 per year, weekly pay is $1,634.62. With 12 years of service accruing at 0.867 weeks per year, accrued leave is approximately 10.4 weeks, valued at $17,000.",
+        "The dollar value of your long service leave depends on two factors: how many weeks you have accrued, and your ordinary weekly rate of pay. Weekly pay is typically your base salary divided by 52, or your average weekly earnings over a reference period if your pay varies. For a full-time employee on $85,000 per year, weekly pay is $1,634.62. With 12 years of service accruing at 0.867 weeks per year, accrued leave is about 10.4 weeks, valued at $17,000.",
         "Our long service leave calculator multiplies years of service by 0.867 to estimate accrued weeks, then multiplies by weekly pay to get the dollar value. It also converts weeks to approximate working days (weeks × 5). This gives you a ballpark figure for financial planning — whether you are considering taking leave, negotiating a payout on resignation, or comparing job offers. The actual entitlement may differ based on your state's formula, pro-rata rules, and whether you have taken any LSL during employment.",
       ]
     ),
@@ -63,8 +63,8 @@ export const guide = buildGuide(
     section(
       "Worked Example: 10 Years on $78,000",
       [
-        "A full-time employee in NSW has worked for the same employer for 10 years earning $78,000 per year. Weekly pay is $78,000 ÷ 52 = $1,500. Accrued long service leave at 0.867 weeks per year: 10 × 0.867 = 8.67 weeks. Dollar value: 8.67 × $1,500 = $13,005. This is approximately 43 working days of paid leave.",
-        "If this employee resigns after 10 years, NSW law entitles them to take or be paid out their accrued LSL. The $13,005 payout is taxed as ordinary income — at a 30% marginal rate plus Medicare, roughly $4,000 in tax, leaving approximately $9,000 net. This is a significant sum that many employees forget to factor into their departure planning.",
+        "A full-time employee in NSW has worked for the same employer for 10 years earning $78,000 per year. Weekly pay is $78,000 ÷ 52 = $1,500. Accrued long service leave at 0.867 weeks per year: 10 × 0.867 = 8.67 weeks. Dollar value: 8.67 × $1,500 = $13,005. This is about 43 working days of paid leave.",
+        "If this employee resigns after 10 years, NSW law entitles them to take or be paid out their accrued LSL. The $13,005 payout is taxed as ordinary income — at a 30% marginal rate plus Medicare, roughly $4,000 in tax, leaving about $9,000 net. This is a significant sum that many employees forget to factor into their departure planning.",
       ]
     ),
     section(
@@ -109,7 +109,7 @@ export const guide = buildGuide(
     {
       question: "How much long service leave do I get after 10 years?",
       answer:
-        "In most Australian states, employees accrue approximately 8.67 weeks (about two months) of long service leave after 10 years of continuous service. South Australia provides 13 weeks. The exact amount depends on your state or territory legislation and any applicable award or enterprise agreement. Our calculator uses 0.867 weeks per year as a general estimate.",
+        "In most Australian states, employees accrue about 8.67 weeks (about two months) of long service leave after 10 years of continuous service. South Australia provides 13 weeks. The exact amount depends on your state or territory legislation and any applicable award or enterprise agreement. Our calculator uses 0.867 weeks per year as a general estimate.",
     },
     {
       question: "Can I cash out long service leave when I quit?",
