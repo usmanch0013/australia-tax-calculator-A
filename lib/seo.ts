@@ -1,4 +1,5 @@
 import { FAQ_ITEMS, POPULAR_HOURLY_RATES, SITE } from "./content";
+import { getPublishedPosts } from "./blog/storage";
 import type { ToolMeta } from "./tools";
 import { TOOLS } from "./tools";
 
@@ -160,7 +161,7 @@ export function getHourlyPageJsonLd(rate: number) {
   };
 }
 
-export function getAllSitemapPaths(): string[] {
+export async function getAllSitemapPaths(): Promise<string[]> {
   const toolPaths = TOOLS.map((t) => `/calculators/${t.slug}`);
   const salaryPaths = [
     50000, 60000, 70000, 75000, 80000, 90000, 100000, 120000, 150000,
@@ -170,12 +171,21 @@ export function getAllSitemapPaths(): string[] {
 
   const hourlyPaths = [...POPULAR_HOURLY_RATES].map((r) => `/hourly/${r}`);
 
+  let blogPaths: string[] = ["/blog"];
+  try {
+    const posts = await getPublishedPosts();
+    blogPaths = ["/blog", ...posts.map((p) => `/${p.slug}`)];
+  } catch {
+    /* blog dir may be empty */
+  }
+
   return [
     "/",
     "/calculators",
     ...toolPaths,
     ...salaryPaths,
     ...hourlyPaths,
+    ...blogPaths,
     "/faq",
     "/about",
     "/contact",
@@ -200,6 +210,12 @@ export function getSitemapEntry(path: string): {
   }
   if (path.startsWith("/salary/") || path.startsWith("/hourly/")) {
     return { changeFrequency: "monthly", priority: 0.8 };
+  }
+  if (path === "/blog") {
+    return { changeFrequency: "weekly", priority: 0.75 };
+  }
+  if (/^\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(path)) {
+    return { changeFrequency: "weekly", priority: 0.7 };
   }
   if (path === "/faq") {
     return { changeFrequency: "monthly", priority: 0.7 };

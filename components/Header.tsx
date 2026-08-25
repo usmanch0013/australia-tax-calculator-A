@@ -9,6 +9,7 @@ import { SITE } from "@/lib/content";
 const NAV_LINKS = [
   { href: "/", label: "Salary Calculator" },
   { href: "/calculators", label: "All Tools" },
+  { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },
   { href: "/about", label: "About" },
 ];

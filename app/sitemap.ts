@@ -2,10 +2,11 @@ import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/content";
 import { getAllSitemapPaths, getSitemapEntry } from "@/lib/seo";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date();
+  const paths = await getAllSitemapPaths();
 
-  return getAllSitemapPaths().map((path) => {
+  return paths.map((path) => {
     const { changeFrequency, priority } = getSitemapEntry(path);
 
     return {

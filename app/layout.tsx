@@ -1,7 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import CookieNotice from "@/components/CookieNotice";
+import SiteChrome from "@/components/SiteChrome";
 import { SITE } from "@/lib/content";
 import { PRIMARY_KEYWORDS } from "@/lib/seo";
 import "./globals.css";
@@ -66,13 +64,7 @@ export default function RootLayout({
   return (
     <html lang="en-AU">
       <body>
-        <a href="#main-content" className="skip-link">
-          Skip to main content
-        </a>
-        <Header />
-        <main id="main-content">{children}</main>
-        <Footer />
-        <CookieNotice />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );
