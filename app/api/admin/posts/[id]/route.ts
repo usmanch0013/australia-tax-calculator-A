@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { deletePost, getPostById, updatePost } from "@/lib/blog/storage";
+import { safeFlushGitSyncQueue } from "@/lib/blog/github-sync";
+import { revalidateBlogPaths } from "@/lib/blog/revalidate";
 import type { BlogPostInput } from "@/lib/blog/types";
 
 interface RouteParams {
@@ -23,9 +25,13 @@ export async function GET(_request: Request, { params }: RouteParams) {
 export async function PUT(request: Request, { params }: RouteParams) {
   try {
     const { id } = await params;
-    const body = (await request.json()) as Partial<BlogPostInput>;
-    const post = await updatePost(id, body);
-    return NextResponse.json(post);
+    const existing = await getPostById(id);
+    const body = (await request.json()) as Partial<BlogPostInput> & { syncGit?: boolean };
+    const { syncGit, ...input } = body;
+    const post = await updatePost(id, input);
+    const syncWarning = syncGit ? await safeFlushGitSyncQueue() : null;
+    revalidateBlogPaths(post.slug, existing?.slug);
+    return NextResponse.json(syncWarning ? { ...post, syncWarning } : post);
   } catch (e) {
     return NextResponse.json(
       { error: e instanceof Error ? e.message : "Failed to update post" },
@@ -37,8 +43,11 @@ export async function PUT(request: Request, { params }: RouteParams) {
 export async function DELETE(_request: Request, { params }: RouteParams) {
   try {
     const { id } = await params;
+    const existing = await getPostById(id);
     await deletePost(id);
-    return NextResponse.json({ ok: true });
+    const syncWarning = await safeFlushGitSyncQueue();
+    revalidateBlogPaths(existing?.slug);
+    return NextResponse.json({ ok: true, syncWarning });
   } catch (e) {
     return NextResponse.json(
       { error: e instanceof Error ? e.message : "Failed to delete post" },

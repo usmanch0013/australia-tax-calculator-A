@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { BLOG_CONFIG } from "@/lib/blog/config";
 
 export default function AdminLoginForm() {
   const router = useRouter();
@@ -37,9 +38,9 @@ export default function AdminLoginForm() {
   return (
     <div className="admin-login">
       <div className="admin-login__card">
-        <h1 className="admin-login__title">Blog admin</h1>
+        <h1 className="admin-login__title">{BLOG_CONFIG.siteName}</h1>
         <p className="admin-login__desc">
-          Sign in to publish articles and check on-page SEO scores.
+          Sign in to {BLOG_CONFIG.loginTagline}.
         </p>
         <form onSubmit={handleSubmit} className="admin-login__form">
           <label className="admin-field">

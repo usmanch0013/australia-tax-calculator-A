@@ -3,6 +3,7 @@ import SiteChrome from "@/components/SiteChrome";
 import { SITE } from "@/lib/content";
 import { PRIMARY_KEYWORDS } from "@/lib/seo";
 import "./globals.css";
+import "@/styles/blog-public.css";
 
 export const viewport: Viewport = {
   width: "device-width",

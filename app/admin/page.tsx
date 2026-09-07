@@ -1,17 +1,8 @@
 import Link from "next/link";
-import { getPostPath } from "@/lib/blog/paths";
+import BlogBackupPanel from "@/components/admin/BlogBackupPanel";
+import PostsTable from "@/components/admin/PostsTable";
+import { BLOG_CONFIG } from "@/lib/blog/config";
 import { getAllPosts } from "@/lib/blog/storage";
-import { analyzeSeo, scoreColor } from "@/lib/blog/seo-score";
-
-function SeoBadge({ score }: { score: number }) {
-  const color = scoreColor(score);
-  return (
-    <span className="admin-seo-badge" style={{ borderColor: color, color }}>
-      {score}
-      <small>/100</small>
-    </span>
-  );
-}
 
 export default async function AdminDashboardPage() {
   const posts = await getAllPosts();
@@ -24,10 +15,7 @@ export default async function AdminDashboardPage() {
         <div className="admin-hero__content">
           <p className="admin-hero__eyebrow">Welcome back</p>
           <h1 className="admin-hero__title">Your content dashboard</h1>
-          <p className="admin-hero__desc">
-            Write salary &amp; tax articles, track Rank Math style SEO scores, and publish
-            straight to your site.
-          </p>
+          <p className="admin-hero__desc">{BLOG_CONFIG.dashboardTagline}</p>
           <div className="admin-hero__actions">
             <Link href="/admin/posts/new" className="admin-btn admin-btn--primary">
               + New article
@@ -42,7 +30,8 @@ export default async function AdminDashboardPage() {
           <ul>
             <li>Set a focus keyword before writing</li>
             <li>Upload a featured image for every post</li>
-            <li>Target 600+ words for better SEO</li>
+            <li>Articles and images save automatically to GitHub</li>
+            <li>Download a JSON backup anytime for extra safety</li>
           </ul>
         </div>
       </section>
@@ -70,6 +59,8 @@ export default async function AdminDashboardPage() {
           </div>
         </div>
       </div>
+
+      <BlogBackupPanel />
 
       <section className="admin-panel">
         <header className="admin-panel__head">
@@ -99,94 +90,14 @@ export default async function AdminDashboardPage() {
             <ol className="admin-empty__steps">
               <li><span>1</span> Write a clear title with your keyword</li>
               <li><span>2</span> Fill SEO sidebar — meta description &amp; image</li>
-              <li><span>3</span> Publish — live at aussalaryaftertax.com/your-slug</li>
+              <li><span>3</span> Publish — live at {BLOG_CONFIG.siteUrl.replace(/^https?:\/\//, "")}/your-slug</li>
             </ol>
             <Link href="/admin/posts/new" className="admin-btn admin-btn--primary admin-btn--lg">
               Write first article
             </Link>
           </div>
         ) : (
-          <div className="admin-table-wrap">
-            <table className="admin-table">
-              <thead>
-                <tr>
-                  <th>Article</th>
-                  <th>Status</th>
-                  <th>SEO</th>
-                  <th>Date</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                {posts.map((post) => {
-                  const seo = analyzeSeo(
-                    post.title,
-                    post.slug,
-                    post.metaDescription,
-                    post.focusKeyword,
-                    post.content,
-                    {
-                      excerpt: post.excerpt,
-                      featuredImage: post.featuredImage,
-                    }
-                  );
-                  return (
-                    <tr key={post.id}>
-                      <td>
-                        <div className="admin-table__title-cell">
-                          {post.featuredImage && (
-                            <img
-                              src={post.featuredImage}
-                              alt=""
-                              className="admin-table__thumb"
-                            />
-                          )}
-                          <div>
-                            <strong>{post.title}</strong>
-                            <span className="admin-table__slug">{getPostPath(post.slug)}</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <span className={`admin-badge admin-badge--${post.status}`}>
-                          {post.status}
-                        </span>
-                      </td>
-                      <td>
-                        <SeoBadge score={seo.score} />
-                      </td>
-                      <td className="admin-table__date">
-                        {new Date(post.publishedAt).toLocaleDateString("en-AU", {
-                          day: "numeric",
-                          month: "short",
-                          year: "numeric",
-                        })}
-                      </td>
-                      <td>
-                        <div className="admin-table__actions">
-                          <Link
-                            href={`/admin/posts/${post.id}/edit`}
-                            className="admin-table__action"
-                          >
-                            Edit
-                          </Link>
-                          {post.status === "published" && (
-                            <Link
-                              href={getPostPath(post.slug)}
-                              className="admin-table__action"
-                              target="_blank"
-                            >
-                              View
-                            </Link>
-                          )}
-                        </div>
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+          <PostsTable posts={posts} />
         )}
       </section>
     </div>

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import AdminLogoutButton from "@/components/admin/AdminLogoutButton";
+import { BLOG_CONFIG } from "@/lib/blog/config";
 
 const NAV = [
   { href: "/admin", label: "Dashboard", exact: true },
@@ -13,9 +14,9 @@ const NAV = [
 
 export default function AdminShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const isLogin = pathname === "/admin/login";
+  const isBarePage = pathname === "/admin/login" || pathname === "/admin/preview";
 
-  if (isLogin) {
+  if (isBarePage) {
     return <>{children}</>;
   }
 
@@ -24,9 +25,9 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
       <header className="admin-shell__header">
         <div className="admin-shell__brand">
           <Link href="/admin" className="admin-shell__logo">
-            <span className="admin-shell__logo-mark" aria-hidden>AU</span>
+            <span className="admin-shell__logo-mark" aria-hidden>{BLOG_CONFIG.brandInitials}</span>
             <span className="admin-shell__logo-text">
-              <strong>Blog Studio</strong>
+              <strong>{BLOG_CONFIG.adminTitle}</strong>
               <small>Content admin</small>
             </span>
           </Link>

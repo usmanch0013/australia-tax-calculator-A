@@ -1,26 +1,8 @@
-import { SITE } from "@/lib/content";
 import { TOOLS } from "@/lib/tools";
+import { BLOG_CONFIG, RESERVED_SLUGS } from "./config";
 
-/** URL paths that cannot be used as article slugs */
-export const RESERVED_SLUGS = new Set([
-  "about",
-  "admin",
-  "api",
-  "blog",
-  "calculators",
-  "contact",
-  "disclaimer",
-  "faq",
-  "hourly",
-  "manifest.webmanifest",
-  "privacy-policy",
-  "robots.txt",
-  "salary",
-  "sitemap.xml",
-  "terms-of-use",
-  "_next",
-  "favicon.ico",
-  "icon.svg",
+const RESERVED = new Set<string>([
+  ...RESERVED_SLUGS,
   ...TOOLS.map((t) => t.slug),
 ]);
 
@@ -30,16 +12,15 @@ export function getPostPath(slug: string): string {
 }
 
 export function getPostUrl(slug: string): string {
-  return `${SITE.url}${getPostPath(slug)}`;
+  return `${BLOG_CONFIG.siteUrl}${getPostPath(slug)}`;
 }
 
 export function getSiteHost(): string {
-  return SITE.url.replace(/^https?:\/\//, "");
+  return BLOG_CONFIG.siteUrl.replace(/^https?:\/\//, "");
 }
 
 export function isReservedSlug(slug: string): boolean {
-  const normalized = slug.trim().toLowerCase();
-  return RESERVED_SLUGS.has(normalized);
+  return RESERVED.has(slug.trim().toLowerCase());
 }
 
 export function validatePostSlug(slug: string): string | null {
