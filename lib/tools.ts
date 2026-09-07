@@ -333,6 +333,42 @@ const BASE_TOOLS: ToolMeta[] = [
     icon: "💸",
     category: "tax",
   },
+  {
+    slug: "second-job-tax-calculator",
+    name: "Second Job Tax Calculator Australia",
+    shortName: "Second Job Tax",
+    description:
+      "How much tax you pay on income from a second job or side hustle.",
+    seoIntro:
+      "A second job is taxed at your marginal rate — often 30% or more once combined with your main salary. See how much of that extra income you actually keep after tax and Medicare.",
+    keywords: ["second job tax calculator", "tax on second job australia", "side hustle tax australia"],
+    icon: "💼",
+    category: "tax",
+  },
+  {
+    slug: "minimum-wage-calculator",
+    name: "Minimum Wage Calculator Australia",
+    shortName: "Minimum Wage",
+    description:
+      "Take-home pay on the national minimum wage — hourly, weekly and annual.",
+    seoIntro:
+      "The adult national minimum wage is $24.95 per hour from 1 July 2025. See gross and after-tax pay for a standard 38-hour week using 2025–26 tax rates.",
+    keywords: ["minimum wage calculator australia", "minimum wage after tax", "australia minimum wage 2025"],
+    icon: "📋",
+    category: "pay",
+  },
+  {
+    slug: "weekly-pay-calculator",
+    name: "Weekly Pay Calculator Australia",
+    shortName: "Weekly Pay",
+    description:
+      "Break an annual salary into weekly gross and take-home pay.",
+    seoIntro:
+      "Wondering what hits your account each week? Enter your annual salary and see weekly gross pay, tax and net take-home — plus fortnightly and monthly figures.",
+    keywords: ["weekly pay calculator", "weekly salary after tax australia", "weekly take home pay calculator"],
+    icon: "📅",
+    category: "pay",
+  },
 ];
 
 export const TOOLS: ToolMeta[] = BASE_TOOLS;

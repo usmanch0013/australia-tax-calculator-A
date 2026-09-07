@@ -20,13 +20,16 @@ import {
   calcContractDayRate,
   calcDivision293,
   calcLongServiceLeave,
+  calcMinimumWage,
   calcNovatedLease,
   calcPayRise,
   calcProRata,
   calcRedundancyPay,
+  calcSecondJobTax,
   calcShiftPenalty,
   calcSickLeave,
   calcTaxRefund,
+  calcWeeklyPay,
   type PenaltyType,
 } from "@/lib/extra-tools";
 import {
@@ -89,6 +92,12 @@ export default function ToolCalculator({ slug }: ToolCalculatorProps) {
       return <SickLeaveCalc />;
     case "tax-refund-estimator":
       return <TaxRefundCalc />;
+    case "second-job-tax-calculator":
+      return <SecondJobTaxCalc />;
+    case "minimum-wage-calculator":
+      return <MinimumWageCalc />;
+    case "weekly-pay-calculator":
+      return <WeeklyPayCalc />;
     default:
       return null;
   }
@@ -500,6 +509,57 @@ function TaxRefundCalc() {
         <ToolCheckbox label="HECS/HELP debt" id="hecs" checked={hecs} onChange={setHecs} />
       </div>
       <ResultTable rows={result.rows} summaryLabel="Refund / Amount Owing" summaryValue={result.summary} />
+    </ToolCard>
+  );
+}
+
+function SecondJobTaxCalc() {
+  const [primary, setPrimary] = useState(70000);
+  const [second, setSecond] = useState(15000);
+  const [hecs, setHecs] = useState(false);
+  const result = useMemo(
+    () => calcSecondJobTax(primary, second, hecs),
+    [primary, second, hecs]
+  );
+
+  return (
+    <ToolCard>
+      <div className="tool-form">
+        <ToolNumberField label="Primary Job Salary" id="primary" prefix="$" value={primary} onChange={setPrimary} step={1000} />
+        <ToolNumberField label="Second Job Income" id="second" prefix="$" value={second} onChange={setSecond} step={500} />
+        <ToolCheckbox label="HECS/HELP debt" id="hecs" checked={hecs} onChange={setHecs} />
+      </div>
+      <ResultTable rows={result.rows} summaryLabel="Second Job After Tax" summaryValue={result.summary} />
+    </ToolCard>
+  );
+}
+
+function MinimumWageCalc() {
+  const [hours, setHours] = useState(38);
+  const result = useMemo(() => calcMinimumWage(hours), [hours]);
+
+  return (
+    <ToolCard>
+      <div className="tool-form">
+        <ToolNumberField label="Hours per Week" id="hours" value={hours} onChange={setHours} min={1} max={60} />
+      </div>
+      <ResultTable rows={result.rows} summaryLabel="Hourly After Tax" summaryValue={result.summary} />
+    </ToolCard>
+  );
+}
+
+function WeeklyPayCalc() {
+  const [annual, setAnnual] = useState(80000);
+  const [hecs, setHecs] = useState(false);
+  const result = useMemo(() => calcWeeklyPay(annual, hecs), [annual, hecs]);
+
+  return (
+    <ToolCard>
+      <div className="tool-form">
+        <ToolNumberField label="Annual Salary" id="annual" prefix="$" value={annual} onChange={setAnnual} step={1000} />
+        <ToolCheckbox label="HECS/HELP debt" id="hecs" checked={hecs} onChange={setHecs} />
+      </div>
+      <ResultTable rows={result.rows} summaryLabel="Weekly Take-Home" summaryValue={result.summary} />
     </ToolCard>
   );
 }

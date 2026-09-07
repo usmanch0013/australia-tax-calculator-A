@@ -305,6 +305,103 @@ export function calcTaxRefund(
   };
 }
 
+export const MINIMUM_WAGE_HOURLY = 24.95;
+
+export function calcSecondJobTax(
+  primarySalary: number,
+  secondJobIncome: number,
+  hasHecs: boolean
+) {
+  const taxPrimary = calculateTotalTax(primarySalary, { includeHecs: hasHecs });
+  const taxCombined = calculateTotalTax(primarySalary + secondJobIncome, {
+    includeHecs: hasHecs,
+  });
+  const taxOnSecond = taxCombined.total - taxPrimary.total;
+  const netSecond = secondJobIncome - taxOnSecond;
+  const effRate = secondJobIncome > 0 ? (taxOnSecond / secondJobIncome) * 100 : 0;
+
+  return {
+    rows: [
+      { label: "Primary Job (Gross)", value: formatCurrency(primarySalary) },
+      {
+        label: "Second Job Income (Gross)",
+        value: formatCurrency(secondJobIncome),
+        highlight: true,
+      },
+      {
+        label: "Combined Gross Income",
+        value: formatCurrency(primarySalary + secondJobIncome),
+      },
+      {
+        label: "Tax on Second Job",
+        value: formatCurrency(taxOnSecond),
+        negative: true,
+        highlight: true,
+      },
+      {
+        label: "Second Job After Tax",
+        value: formatCurrency(netSecond),
+        highlight: true,
+      },
+      { label: "Effective Tax on Second Job", value: formatPercent(effRate) },
+      {
+        label: "Marginal Rate (Combined)",
+        value: formatPercent(taxCombined.marginalRate),
+      },
+      {
+        label: "Combined Take-Home",
+        value: formatCurrency(
+          primarySalary + secondJobIncome - taxCombined.total
+        ),
+      },
+    ] satisfies ResultRow[],
+    summary: formatCurrency(netSecond),
+  };
+}
+
+export function calcMinimumWage(hoursPerWeek = 38) {
+  const result = calcHourlyAfterTax(MINIMUM_WAGE_HOURLY, hoursPerWeek);
+  return {
+    ...result,
+    rows: [
+      {
+        label: "National Minimum Wage (Hourly)",
+        value: formatCurrency(MINIMUM_WAGE_HOURLY),
+        highlight: true,
+      },
+      ...result.rows,
+    ] satisfies ResultRow[],
+    summary: result.summary,
+  };
+}
+
+export function calcWeeklyPay(annualSalary: number, hasHecs: boolean) {
+  const tax = calculateTotalTax(annualSalary, { includeHecs: hasHecs });
+  const netAnnual = annualSalary - tax.total;
+
+  return {
+    rows: [
+      { label: "Annual Salary (Gross)", value: formatCurrency(annualSalary) },
+      {
+        label: "Weekly Gross Pay",
+        value: formatCurrency(annualSalary / 52),
+        highlight: true,
+      },
+      { label: "Fortnightly Gross Pay", value: formatCurrency(annualSalary / 26) },
+      { label: "Est. Annual Tax", value: formatCurrency(tax.total), negative: true },
+      {
+        label: "Weekly Take-Home",
+        value: formatCurrency(netAnnual / 52),
+        highlight: true,
+      },
+      { label: "Fortnightly Take-Home", value: formatCurrency(netAnnual / 26) },
+      { label: "Monthly Take-Home", value: formatCurrency(netAnnual / 12) },
+      { label: "Annual Take-Home", value: formatCurrency(netAnnual) },
+    ] satisfies ResultRow[],
+    summary: formatCurrency(netAnnual / 52),
+  };
+}
+
 export function calcHourlyAfterTax(hourly: number, hoursPerWeek = 38) {
   const annual = hourlyToAnnual(hourly, hoursPerWeek);
   const tax = calculateTotalTax(annual);

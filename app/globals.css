@@ -1368,6 +1368,52 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.salary-insights {
+  max-width: 48rem;
+}
+
+.salary-insights__p {
+  margin: 0 0 1rem;
+  color: var(--stone-700);
+  line-height: 1.7;
+}
+
+.salary-insights__links {
+  margin: 1.5rem 0 2rem;
+}
+
+.salary-insights__links-title {
+  margin: 0 0 0.65rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--stone-600);
+}
+
+.salary-insights__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.salary-insights__list a {
+  color: var(--forest-700);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.salary-insights__list a:hover {
+  text-decoration: underline;
+}
+
+.salary-insights__faq {
+  margin-top: 1rem;
+}
+
 /* Footer */
 
 .site-footer {
@@ -1383,6 +1429,14 @@ body {
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 2rem;
   margin-bottom: 2rem;
+}
+
+.site-footer__grid--wide {
+  grid-template-columns: 1.35fr repeat(4, minmax(0, 1fr));
+}
+
+.site-footer__heading--spaced {
+  margin-top: 1.25rem;
 }
 
 .site-footer__title {
@@ -3136,7 +3190,8 @@ body {
     position: relative;
   }
 
-  .site-footer__grid {
+  .site-footer__grid,
+  .site-footer__grid--wide {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }

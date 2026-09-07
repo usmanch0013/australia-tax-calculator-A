@@ -10,6 +10,7 @@ import { guide as hourlyToSalary } from "./calculators/hourly-to-salary-calculat
 import { guide as incomeTax } from "./calculators/income-tax-calculator";
 import { guide as longServiceLeave } from "./calculators/long-service-leave-calculator";
 import { guide as medicareLevy } from "./calculators/medicare-levy-calculator";
+import { guide as minimumWage } from "./calculators/minimum-wage-calculator";
 import { guide as netToGross } from "./calculators/net-to-gross-calculator";
 import { guide as novatedLease } from "./calculators/novated-lease-calculator";
 import { guide as overtime } from "./calculators/overtime-calculator";
@@ -19,11 +20,13 @@ import { guide as proRataSalary } from "./calculators/pro-rata-salary-calculator
 import { guide as redundancyPay } from "./calculators/redundancy-pay-calculator";
 import { guide as salarySacrifice } from "./calculators/salary-sacrifice-calculator";
 import { guide as salaryToHourly } from "./calculators/salary-to-hourly-calculator";
+import { guide as secondJobTax } from "./calculators/second-job-tax-calculator";
 import { guide as shiftPenalty } from "./calculators/shift-penalty-calculator";
 import { guide as sickLeave } from "./calculators/sick-leave-calculator";
 import { guide as superCalc } from "./calculators/super-calculator";
 import { guide as takeHomePay } from "./calculators/take-home-pay-calculator";
 import { guide as taxRefund } from "./calculators/tax-refund-estimator";
+import { guide as weeklyPay } from "./calculators/weekly-pay-calculator";
 
 const GUIDES: Record<string, ToolGuide> = {
   "take-home-pay-calculator": takeHomePay,
@@ -51,6 +54,9 @@ const GUIDES: Record<string, ToolGuide> = {
   "shift-penalty-calculator": shiftPenalty,
   "sick-leave-calculator": sickLeave,
   "tax-refund-estimator": taxRefund,
+  "second-job-tax-calculator": secondJobTax,
+  "minimum-wage-calculator": minimumWage,
+  "weekly-pay-calculator": weeklyPay,
 };
 
 export function getGuideBySlug(slug: string): ToolGuide | undefined {

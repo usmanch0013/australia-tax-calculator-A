@@ -8,8 +8,10 @@ import SalaryCalculator from "@/components/SalaryCalculator";
 import { HIGH_INCOME_SALARIES, POPULAR_SALARIES, SITE } from "@/lib/content";
 import {
   getBreadcrumbJsonLd,
+  getFaqJsonLdFromItems,
   getSalaryPageJsonLd,
 } from "@/lib/seo";
+import { getSalaryFaqs, getSalaryInsights } from "@/lib/salary-content";
 import {
   calculateSalary,
   defaultInput,
@@ -68,6 +70,8 @@ export default async function SalaryPage({ params }: PageProps) {
   const results = calculateSalary({ ...defaultInput, salary: amount });
   const formatted = amount.toLocaleString("en-AU");
   const pageUrl = `${SITE.url}/salary/${amount}`;
+  const salaryFaqs = getSalaryFaqs(amount, results.net, results.net / 52);
+  const insights = getSalaryInsights(amount, results.net);
 
   return (
     <>
@@ -78,6 +82,7 @@ export default async function SalaryPage({ params }: PageProps) {
           { name: `$${formatted} After Tax`, url: pageUrl },
         ])}
       />
+      <JsonLd data={getFaqJsonLdFromItems(salaryFaqs)} />
 
       <nav className="breadcrumb" aria-label="Breadcrumb">
         <div className="site-container">
@@ -177,6 +182,42 @@ export default async function SalaryPage({ params }: PageProps) {
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      <section className="site-section" aria-labelledby="salary-insights-heading">
+        <div className="site-container">
+          <header className="section-header section-header--left">
+            <h2 id="salary-insights-heading" className="section-header__title">
+              ${formatted} after tax — what to know
+            </h2>
+          </header>
+          <div className="salary-insights">
+            {insights.paragraphs.map((paragraph) => (
+              <p key={paragraph.slice(0, 40)} className="salary-insights__p">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+          <div className="salary-insights__links">
+            <p className="salary-insights__links-title">Related calculators</p>
+            <ul className="salary-insights__list">
+              {insights.relatedSlugs.map((item) => (
+                <li key={item.slug}>
+                  <Link href={`/calculators/${item.slug}`}>{item.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="faq-list salary-insights__faq">
+            {salaryFaqs.map((item) => (
+              <details key={item.question} className="faq-item">
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>

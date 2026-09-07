@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <>
       <JsonLd data={getWebsiteJsonLd()} />
-      <JsonLd data={getFaqJsonLd()} />
+      <JsonLd data={getFaqJsonLd(5)} />
 
       <PremiumHero />
 

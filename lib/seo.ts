@@ -1,7 +1,16 @@
 import { FAQ_ITEMS, POPULAR_HOURLY_RATES, SITE } from "./content";
 import { getPublishedPosts } from "./blog/storage";
+import type { GuideFaq } from "./guides/types";
 import type { ToolMeta } from "./tools";
 import { TOOLS } from "./tools";
+
+function trimMeta(text: string, max = 155): string {
+  const clean = text.replace(/\s+/g, " ").trim();
+  if (clean.length <= max) return clean;
+  const cut = clean.slice(0, max - 1);
+  const lastSpace = cut.lastIndexOf(" ");
+  return `${(lastSpace > 80 ? cut.slice(0, lastSpace) : cut).trim()}…`;
+}
 
 export const PRIMARY_KEYWORDS = [
   "salary calculator australia",
@@ -38,7 +47,18 @@ export const PRIMARY_KEYWORDS = [
   "penalty rates calculator",
   "tax refund calculator australia",
   "hourly rate after tax",
+  "second job tax calculator australia",
+  "minimum wage calculator australia",
+  "weekly pay calculator australia",
 ] as const;
+
+export function buildToolMetaDescription(tool: ToolMeta): string {
+  return trimMeta(`${tool.description} ${tool.seoIntro}`);
+}
+
+export function getToolPageTitle(tool: ToolMeta): string {
+  return `${tool.shortName} Calculator Australia ${SITE.year} — After Tax`;
+}
 
 export function getWebsiteJsonLd() {
   return {
@@ -51,11 +71,6 @@ export function getWebsiteJsonLd() {
         name: SITE.name,
         description: SITE.description,
         inLanguage: "en-AU",
-        potentialAction: {
-          "@type": "SearchAction",
-          target: `${SITE.url}/calculators?q={search_term_string}`,
-          "query-input": "required name=search_term_string",
-        },
       },
       {
         "@type": "Organization",
@@ -90,11 +105,11 @@ export function getWebsiteJsonLd() {
   };
 }
 
-export function getFaqJsonLd() {
+export function getFaqJsonLdFromItems(items: readonly GuideFaq[]) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: FAQ_ITEMS.map((item) => ({
+    mainEntity: items.map((item) => ({
       "@type": "Question",
       name: item.question,
       acceptedAnswer: {
@@ -103,6 +118,11 @@ export function getFaqJsonLd() {
       },
     })),
   };
+}
+
+export function getFaqJsonLd(limit?: number) {
+  const items = limit ? FAQ_ITEMS.slice(0, limit) : FAQ_ITEMS;
+  return getFaqJsonLdFromItems(items);
 }
 
 export function getToolJsonLd(tool: ToolMeta) {
