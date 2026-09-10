@@ -12,8 +12,10 @@ export default function SiteChrome({
 }) {
   const pathname = usePathname();
   const isAdmin = pathname?.startsWith("/admin");
+  const isBlogPublic =
+    pathname === "/blog" || pathname?.startsWith("/blog/");
 
-  if (isAdmin) {
+  if (isAdmin || isBlogPublic) {
     return <>{children}</>;
   }
 

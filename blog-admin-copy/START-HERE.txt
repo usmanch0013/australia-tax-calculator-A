@@ -1,0 +1,18 @@
+POORA "blog-admin-copy" folder copy karo (ya is folder ki ANDAR ki files).
+
+Dusri Next.js site ke ROOT par paste karo (jahan package.json hai):
+  - src      → merge
+  - content  → merge
+  - public   → merge
+  - middleware.snippet.ts, env.local.example.txt, AGENTS.md → root par rakh sakte ho
+
+Phir Cursor Agent ko bolo:
+  "Read blog-admin-copy/AGENTS.md and integrate blog admin into this project"
+
+Ya files paste ke baad:
+  "AGENTS.md follow karo — blog admin adjust karo"
+
+Human steps: env.local + npm install marked + npm run dev → /admin/login
+
+Naya kit banane ke liye (CGPA project):
+  npm run pack-blog-admin

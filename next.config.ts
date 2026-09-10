@@ -9,11 +9,6 @@ const nextConfig: NextConfig = {
         destination: "https://aussalaryaftertax.com/:path*",
         permanent: true,
       },
-      {
-        source: "/blog/:slug",
-        destination: "/:slug",
-        permanent: true,
-      },
     ];
   },
 };

@@ -9,7 +9,7 @@ const siteName = process.env.NEXT_PUBLIC_SITE_NAME?.trim()
   ? config.siteName
   : SITE.name;
 
-/** Blog admin configuration for this site */
+/** Blog admin + public blog configuration */
 export const BLOG_CONFIG = {
   siteUrl,
   siteName,
@@ -23,7 +23,16 @@ export const BLOG_CONFIG = {
   dashboardTagline:
     process.env.BLOG_DASHBOARD_TAGLINE?.trim() ||
     `Write and publish articles for ${siteName}.`,
+  postUrlPrefix: config.postUrlPrefix,
+  publicChrome: config.publicChrome,
+  quickLinks: config.quickLinks,
+  sidebarCalculators: config.sidebarCalculators,
+  sidebarCta: config.sidebarCta,
+  blogIndexTitle:
+    process.env.BLOG_INDEX_TITLE?.trim() || `Salary & Tax Blog — ${siteName}`,
+  blogIndexSubtitle:
+    process.env.BLOG_INDEX_SUBTITLE?.trim() ||
+    "Practical guides on take-home pay, tax brackets, HECS and super for Aussie workers.",
 };
 
-/** Top-level routes that must NOT be used as article slugs */
 export const RESERVED_SLUGS = config.reservedSlugs;

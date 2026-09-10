@@ -1,4 +1,5 @@
 import { FAQ_ITEMS, POPULAR_HOURLY_RATES, SITE } from "./content";
+import { getPostPath } from "./blog/paths";
 import { getPublishedPosts } from "./blog/storage";
 import type { GuideFaq } from "./guides/types";
 import type { ToolMeta } from "./tools";
@@ -194,7 +195,7 @@ export async function getAllSitemapPaths(): Promise<string[]> {
   let blogPaths: string[] = ["/blog"];
   try {
     const posts = await getPublishedPosts();
-    blogPaths = ["/blog", ...posts.map((p) => `/${p.slug}`)];
+    blogPaths = ["/blog", ...posts.map((p) => getPostPath(p.slug))];
   } catch {
     /* blog dir may be empty */
   }

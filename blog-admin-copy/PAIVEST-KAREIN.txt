@@ -1,0 +1,25 @@
+========================================
+BLOG ADMIN COPY FOLDER
+========================================
+
+1) Is folder "blog-admin-copy" ko poora copy karo
+   (USB / zip / dusri drive)
+
+2) Apni DOSRI website ke folder mein jao
+   (jahan package.json hai)
+
+3) Is folder ki ANDAR ki cheezen paste karo — MERGE:
+     src/
+     content/
+     public/
+   + env.local.example.txt → .env.local mein lines
+   + middleware.snippet.ts → src/middleware.ts
+
+4) Agent se adjust:
+   Cursor chat: "AGENTS.md padho aur blog admin integrate karo"
+
+5) npm install marked
+   npm run dev
+   → /admin/login
+
+========================================

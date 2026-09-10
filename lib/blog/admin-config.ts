@@ -85,6 +85,35 @@ function deriveBrandInitials(siteName: string): string {
   return (compact.slice(0, 2) || "BL").toUpperCase();
 }
 
+export interface BlogQuickLink {
+  href: string;
+  label: string;
+}
+
+function parseQuickLinks(): BlogQuickLink[] | null {
+  const raw = process.env.BLOG_QUICK_LINKS?.trim();
+  if (!raw) return null;
+  try {
+    const parsed = JSON.parse(raw) as BlogQuickLink[];
+    if (!Array.isArray(parsed)) return null;
+    return parsed.filter((item) => item?.href && item?.label);
+  } catch {
+    return null;
+  }
+}
+
+function parseSidebarCalculators(): BlogQuickLink[] {
+  const raw = process.env.BLOG_SIDEBAR_CALCULATORS?.trim();
+  if (!raw) return [];
+  try {
+    const parsed = JSON.parse(raw) as BlogQuickLink[];
+    if (!Array.isArray(parsed)) return [];
+    return parsed.filter((item) => item?.href && item?.label);
+  } catch {
+    return [];
+  }
+}
+
 function parseExtraReservedSlugs(): string[] {
   const raw = process.env.BLOG_RESERVED_SLUGS?.trim();
   if (!raw) return [];
@@ -116,6 +145,47 @@ export function getBlogAdminConfig() {
     new Set([...DEFAULT_RESERVED_SLUGS, ...parseExtraReservedSlugs()])
   );
 
+  const postUrlPrefix =
+    process.env.BLOG_POST_URL_PREFIX?.trim().toLowerCase() === "blog" ? "blog" : "root";
+
+  const publicChrome =
+    process.env.BLOG_PUBLIC_CHROME?.trim().toLowerCase() === "minimal" ? "minimal" : "site";
+
+  const quickLinks =
+    parseQuickLinks() ??
+    (publicChrome === "site"
+      ? [
+          { href: "/", label: "CGPA Calculator" },
+          { href: "/universities", label: "All universities" },
+          { href: "/blog", label: "Blog guides" },
+          { href: "/about", label: "About us" },
+        ]
+      : [
+          { href: "/", label: "Home" },
+          { href: "/blog", label: "All articles" },
+        ]);
+
+  const sidebarCta =
+    process.env.BLOG_SIDEBAR_CTA?.trim().toLowerCase() === "off"
+      ? null
+      : publicChrome === "site"
+        ? {
+            title: process.env.BLOG_SIDEBAR_CTA_TITLE?.trim() || "Free CGPA tool",
+            text:
+              process.env.BLOG_SIDEBAR_CTA_TEXT?.trim() ||
+              "Calculate semester GPA, cumulative CGPA, and percentage in seconds.",
+            href: process.env.BLOG_SIDEBAR_CTA_HREF?.trim() || "/",
+            label: process.env.BLOG_SIDEBAR_CTA_LABEL?.trim() || "Open calculator",
+          }
+        : {
+            title: process.env.BLOG_SIDEBAR_CTA_TITLE?.trim() || `Explore ${siteName}`,
+            text:
+              process.env.BLOG_SIDEBAR_CTA_TEXT?.trim() ||
+              "Discover more guides and tools on our website.",
+            href: process.env.BLOG_SIDEBAR_CTA_HREF?.trim() || "/",
+            label: process.env.BLOG_SIDEBAR_CTA_LABEL?.trim() || "Visit homepage",
+          };
+
   return {
     siteUrl,
     hostname,
@@ -133,6 +203,16 @@ export function getBlogAdminConfig() {
     dashboardTagline:
       process.env.BLOG_DASHBOARD_TAGLINE?.trim() ||
       `Write and publish articles for ${siteName}.`,
+    postUrlPrefix,
+    publicChrome,
+    quickLinks,
+    sidebarCalculators: parseSidebarCalculators(),
+    sidebarCta,
+    blogIndexTitle:
+      process.env.BLOG_INDEX_TITLE?.trim() || `${siteName} Blog`,
+    blogIndexSubtitle:
+      process.env.BLOG_INDEX_SUBTITLE?.trim() ||
+      "Articles, guides, and updates from our team.",
   };
 }
 

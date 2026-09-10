@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import BlogArticleView from "@/components/blog/BlogArticleView";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { estimateReadingTime, renderMarkdown } from "@/lib/blog/markdown";
+import { renderMarkdown } from "@/lib/blog/markdown";
 import { getPostPath } from "@/lib/blog/paths";
 import {
   ARTICLE_PREVIEW_STORAGE_KEY,
@@ -38,10 +39,7 @@ export default function AdminArticlePreviewPage() {
   }, []);
 
   const html = useMemo(() => (data ? renderMarkdown(data.content) : ""), [data]);
-  const path = data?.slug.trim() ? getPostPath(data.slug) : "/your-article-slug";
-  const readingMin = data
-    ? estimateReadingTime(data.content.replace(/<[^>]*>/g, " ").split(/\s+/).filter(Boolean).length)
-    : 1;
+  const path = data?.slug.trim() ? getPostPath(data.slug) : "/blog/your-article-slug";
 
   if (!ready) {
     return null;
@@ -90,47 +88,23 @@ export default function AdminArticlePreviewPage() {
       </div>
 
       <Header />
-      <article className="blog-article">
-        <nav className="breadcrumb breadcrumb--tool" aria-label="Breadcrumb">
-          <div className="site-container">
-            <ol className="breadcrumb__list">
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/blog">Blog</Link></li>
-              <li aria-current="page">{data.title || "Preview"}</li>
-            </ol>
-          </div>
-        </nav>
-
-        <header className="blog-article__header">
-          <div className="site-container">
-            {data.featuredImage && (
-              <div className="blog-article__hero-image">
-                <img
-                  src={data.featuredImage}
-                  alt={data.featuredImageAlt || data.title || "Featured image"}
-                  width={1200}
-                  height={630}
-                />
-              </div>
-            )}
-            <time className="blog-article__date" dateTime={new Date().toISOString()}>
-              Preview
-            </time>
-            <h1 className="blog-article__title">{data.title || "Untitled"}</h1>
-            <p className="blog-article__meta">
-              By {data.author || "Editor"} · {readingMin} min read
-            </p>
-            {data.excerpt && <p className="blog-article__excerpt">{data.excerpt}</p>}
-          </div>
-        </header>
-
-        <div className="site-container blog-article__body">
-          <div
-            className="blog-article__prose"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        </div>
-      </article>
+      <BlogArticleView
+        title={data.title}
+        slug={data.slug}
+        excerpt={data.excerpt}
+        author={data.author}
+        featuredImage={data.featuredImage}
+        featuredImageAlt={data.featuredImageAlt}
+        featuredImageTitle={data.featuredImageTitle}
+        featuredImageDescription={data.featuredImageDescription}
+        html={html}
+        content={data.content}
+        publishedAt={new Date().toISOString()}
+        categories={(data.categories ?? []).map((slug) => ({
+          slug,
+          name: slug.replace(/-/g, " ").replace(/\b\w/g, (letter) => letter.toUpperCase()),
+        }))}
+      />
       <Footer />
     </>
   );

@@ -8,7 +8,11 @@ const RESERVED = new Set<string>([
 
 export function getPostPath(slug: string): string {
   const clean = slug.trim().replace(/^\/+|\/+$/g, "");
-  return clean ? `/${clean}` : "/";
+  if (!clean) return "/";
+  if (BLOG_CONFIG.postUrlPrefix === "blog") {
+    return `/blog/${clean}`;
+  }
+  return `/${clean}`;
 }
 
 export function getPostUrl(slug: string): string {
