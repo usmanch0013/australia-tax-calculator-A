@@ -123,7 +123,7 @@ export default async function BlogIndexContent({
   return (
     <main id="main-content" className="page-shell blog-index">
       <header className="blog-index__hero">
-        <div className="container">
+        <div className="site-container">
           <p className="blog-index__eyebrow">Salary &amp; tax guides · Australia</p>
           <h1 className="blog-index__title">{BLOG_CONFIG.blogIndexTitle}</h1>
           <p className="blog-index__subtitle">{BLOG_CONFIG.blogIndexSubtitle}</p>
@@ -164,7 +164,7 @@ export default async function BlogIndexContent({
         </div>
       </header>
 
-      <div className="container page-body">
+      <div className="site-container page-body">
         {visible.length === 0 ? (
           <p className="blog-index__empty">
             {activeCategory ? `No articles in ${activeCategory.name} yet.` : "New articles coming soon."}

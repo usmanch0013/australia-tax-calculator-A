@@ -1554,8 +1554,8 @@ a.blog-cat:hover {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.blog-index__hero .container {
-  max-width: 1200px;
+.blog-index__hero .site-container {
+  max-width: 1280px;
 }
 
 .blog-index__eyebrow {
@@ -1883,5 +1883,144 @@ a.blog-pagination__link:hover {
 
   .blog-index .page-body {
     padding-top: 1.75rem;
+  }
+}
+
+/* ===== Blog container + responsive polish (2026-11-06) =====
+   Root cause of the flush-left hero: there is no `.container` class in
+   globals.css — only `.site-container` (1280px, centred, 1.5rem padding).
+   The index now uses `.site-container` in the markup; these rules make
+   that alignment explicit and tighten the responsive behaviour. */
+
+.blog-index {
+  overflow-x: clip;
+}
+
+.blog-index .site-container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  box-sizing: border-box;
+}
+
+.blog-index img {
+  max-width: 100%;
+}
+
+/* Hero: keep the title block in the same column as the site header. */
+.blog-index__hero .site-container {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.blog-index__title {
+  max-width: 18ch;
+}
+
+/* Featured card: cap the image height so a tall infographic does not
+   dominate the card, and keep the text column readable. */
+.blog-index .blog-card--featured .blog-card__image {
+  max-height: 420px;
+}
+
+.blog-index .blog-card--featured .blog-card__excerpt {
+  -webkit-line-clamp: 4;
+}
+
+@media (max-width: 1100px) {
+  .blog-index .blog-card--featured .blog-card__body {
+    padding: 1.6rem 1.75rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .blog-index__hero {
+    padding: 2.75rem 0 2.25rem;
+  }
+
+  .blog-index__title {
+    font-size: clamp(1.9rem, 6vw, 2.5rem);
+  }
+
+  .blog-index__subtitle {
+    font-size: 1.02rem;
+  }
+
+  .blog-index .blog-card--featured .blog-card__image {
+    max-height: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .blog-index .site-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .blog-index__hero {
+    padding: 2.25rem 0 1.9rem;
+  }
+
+  .blog-index__eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+  }
+
+  .blog-index__title {
+    font-size: 1.85rem;
+    max-width: none;
+  }
+
+  .blog-index__subtitle {
+    font-size: 0.98rem;
+  }
+
+  .blog-index__stats {
+    gap: 0.4rem 1.1rem;
+    font-size: 0.85rem;
+  }
+
+  .blog-index__hero .blog-cat {
+    padding: 0.38rem 0.75rem;
+    font-size: 0.78rem;
+  }
+
+  .blog-index .page-body {
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .blog-index .blog-grid {
+    gap: 1rem;
+  }
+
+  .blog-index .blog-card__body {
+    padding: 1.1rem 1.15rem 1.25rem;
+  }
+
+  .blog-index .blog-card--featured .blog-card__body {
+    padding: 1.25rem 1.15rem 1.4rem;
+  }
+
+  .blog-index .blog-card__title {
+    font-size: 1.12rem;
+  }
+
+  .blog-index .blog-card--featured .blog-card__title {
+    font-size: 1.35rem;
+  }
+
+  .blog-pagination {
+    gap: 0.4rem;
+    margin-top: 2rem;
+  }
+
+  .blog-pagination__link {
+    min-width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.86rem;
   }
 }
