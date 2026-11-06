@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import BlogArticleView from "@/components/blog/BlogArticleView";
 import BlogChrome from "@/components/blog/BlogChrome";
 import { loadBlogArticlePage } from "@/components/blog/loadBlogArticlePage";
@@ -11,8 +10,7 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+export const revalidate = 30;
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
@@ -40,10 +38,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function BlogArticleUnderBlogPrefixPage({ params }: PageProps) {
-  if (BLOG_CONFIG.postUrlPrefix !== "blog") {
-    notFound();
-  }
-
   const { slug } = await params;
   const { post, html, toc, resolvedCategories, recentPosts, calculators } =
     await loadBlogArticlePage(slug);

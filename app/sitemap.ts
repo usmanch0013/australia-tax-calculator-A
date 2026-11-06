@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/content";
 import { getAllSitemapPaths, getSitemapEntry } from "@/lib/seo";
 
+export const revalidate = 30;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date();
   const paths = await getAllSitemapPaths();

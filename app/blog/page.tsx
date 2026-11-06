@@ -3,8 +3,7 @@ import BlogChrome from "@/components/blog/BlogChrome";
 import BlogIndexContent from "@/components/blog/BlogIndexContent";
 import { BLOG_CONFIG } from "@/lib/blog/config";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+export const revalidate = 30;
 
 export const metadata: Metadata = {
   title: BLOG_CONFIG.blogIndexTitle,

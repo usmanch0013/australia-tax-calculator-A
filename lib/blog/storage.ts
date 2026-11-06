@@ -5,6 +5,10 @@ import { generateSlug } from "./utils";
 import { validatePostSlug } from "./paths";
 import { blogRelativePath, queueGitDelete, queueGitUpsert } from "./github-sync";
 import { getCategories, normalizeCategorySlugs } from "./categories";
+import {
+  getWordPressPostBySlug,
+  getWordPressPosts,
+} from "./wordpress";
 import type { BlogCategory, BlogPost, BlogPostInput } from "./types";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
@@ -38,11 +42,26 @@ export async function getAllPosts(): Promise<BlogPost[]> {
 }
 
 export async function getPublishedPosts(): Promise<BlogPost[]> {
-  const all = await getAllPosts();
-  return all.filter((p) => p.status === "published");
+  // WordPress (blog.aussalaryaftertax.com) is the live source of truth.
+  // Local content/blog/*.json posts are kept as a fallback / for posts
+  // created in the main site's own admin. Same slug: WordPress wins.
+  const [wpPosts, local] = await Promise.all([
+    getWordPressPosts(),
+    getAllPosts(),
+  ]);
+  const seen = new Set(wpPosts.map((p) => p.slug));
+  const merged = [
+    ...wpPosts,
+    ...local.filter((p) => p.status === "published" && !seen.has(p.slug)),
+  ];
+  return merged.sort(
+    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+  );
 }
 
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
+  const wpPost = await getWordPressPostBySlug(slug);
+  if (wpPost) return wpPost;
   try {
     const raw = await fs.readFile(postPath(slug), "utf8");
     return JSON.parse(raw) as BlogPost;

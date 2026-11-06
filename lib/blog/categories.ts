@@ -1,6 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { generateSlug } from "./utils";
+import { getWordPressCategories } from "./wordpress";
 import { blogRelativePath, queueGitUpsert } from "./github-sync";
 import type { BlogCategory } from "./types";
 
@@ -40,27 +41,31 @@ async function ensureFile(): Promise<void> {
 
 export async function getCategories(): Promise<BlogCategory[]> {
   await ensureFile();
+  let local: BlogCategory[] = [];
   try {
     const raw = await fs.readFile(CATEGORIES_PATH, "utf8");
     const parsed = JSON.parse(raw) as unknown;
-    if (!Array.isArray(parsed)) return [];
-
-    const seen = new Set<string>();
-    const categories: BlogCategory[] = [];
-
-    for (const item of parsed) {
-      if (!item || typeof item !== "object") continue;
-      const name = normalizeName(String((item as BlogCategory).name ?? ""));
-      const slug = generateSlug(String((item as BlogCategory).slug || name));
-      if (!name || !slug || seen.has(slug)) continue;
-      seen.add(slug);
-      categories.push({ slug, name });
+    if (Array.isArray(parsed)) {
+      const seen = new Set<string>();
+      for (const item of parsed) {
+        if (!item || typeof item !== "object") continue;
+        const name = normalizeName(String((item as BlogCategory).name ?? ""));
+        const slug = generateSlug(String((item as BlogCategory).slug || name));
+        if (!name || !slug || seen.has(slug)) continue;
+        seen.add(slug);
+        local.push({ slug, name });
+      }
     }
-
-    return categories.sort((a, b) => a.name.localeCompare(b.name));
   } catch {
-    return [];
+    local = [];
   }
+
+  // Merge in the WordPress categories so WP posts can be filtered by
+  // category on the main-domain blog index. WP failure = local only.
+  const wp = await getWordPressCategories().catch(() => [] as BlogCategory[]);
+  const bySlug = new Map<string, BlogCategory>();
+  for (const category of [...local, ...wp]) bySlug.set(category.slug, category);
+  return Array.from(bySlug.values()).sort((a, b) => a.name.localeCompare(b.name));
 }
 
 async function saveCategories(categories: BlogCategory[]): Promise<BlogCategory[]> {

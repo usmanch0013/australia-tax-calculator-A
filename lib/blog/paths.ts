@@ -9,10 +9,12 @@ const RESERVED = new Set<string>([
 export function getPostPath(slug: string): string {
   const clean = slug.trim().replace(/^\/+|\/+$/g, "");
   if (!clean) return "/";
-  if (BLOG_CONFIG.postUrlPrefix === "blog") {
-    return `/blog/${clean}`;
-  }
-  return `/${clean}`;
+  // This site serves articles under /blog/<slug> (the WordPress articles
+  // live at blog.aussalaryaftertax.com/<slug>). Do NOT depend on the
+  // BLOG_POST_URL_PREFIX env var: without it the default was "root",
+  // which made every blog card link to /<slug> — a route that does not
+  // exist in this app — and /blog/<slug> itself returned 404.
+  return `/blog/${clean}`;
 }
 
 export function getPostUrl(slug: string): string {
